@@ -62,7 +62,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className={classes.moblieMenuContainer}>
+        <div className={classes.mobileMenuContainer}>
           <img
             className={classes.menuIcon}
             src={toggle ? close : menu}
