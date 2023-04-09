@@ -1,0 +1,137 @@
+@use "./breakpoints" as bp;
+
+@mixin hidden {
+  display: none;
+}
+@mixin flex {
+  display: flex;
+}
+@mixin paddingX {
+  padding-left: 0.75rem;
+  padding-right: 1.5rem;
+
+  @media (min-width: bp.$sm) {
+    padding-left: 1rem;
+    padding-right: 4rem;
+  }
+}
+
+@mixin paddingY {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+
+  @media (min-width: bp.$sm) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@mixin padding {
+  padding-bottom: 3.5rem;
+  @media (min-width: bp.$sm) {
+    padding-bottom: 6rem;
+  }
+}
+@mixin sectionHeadText {
+  font-size: 60px;
+  font-weight: 900;
+  color: #ffffff;
+  @media (max-width: 991px) {
+    font-size: 50px;
+  }
+  @media (max-width: 767px) {
+    font-size: 40px;
+  }
+  @media (max-width: 479px) {
+    font-size: 30px;
+  }
+}
+
+@mixin sectionSubText {
+  font-size: 18px;
+  color: #7b7f9e;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  @media (max-width: 479px) {
+    font-size: 14px;
+  }
+}
+
+@mixin heroHeadText {
+  font-weight: 900;
+  color: white;
+  font-size: 40px;
+  line-height: 98px;
+  margin-top: 2px;
+
+  @media (min-width: bp.$xs) {
+    font-size: 50px;
+  }
+
+  @media (min-width: bp.$sm) {
+    font-size: 60px;
+  }
+
+  @media (min-width: bp.$lg) {
+    font-size: 80px;
+  }
+}
+
+@mixin heroSubText {
+  color: #dfd9ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 40px;
+
+  @media (min-width: bp.$xs) {
+    font-size: 20px;
+  }
+
+  @media (min-width: bp.$sm) {
+    font-size: 26px;
+  }
+
+  @media (min-width: bp.$lg) {
+    font-size: 30px;
+  }
+}
+
+@mixin paddingX {
+  padding-left: 0.75rem;
+  padding-right: 1.5rem;
+
+  @media (min-width: bp.$sm) {
+    padding-left: 1rem;
+    padding-right: 4rem;
+  }
+}
+
+@mixin paddingY {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+
+  @media (min-width: bp.$sm) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@mixin padding {
+  padding-bottom: 3.5rem;
+  @media (min-width: bp.$sm) {
+    padding-bottom: 6rem;
+  }
+}
+@mixin black_gradient {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
