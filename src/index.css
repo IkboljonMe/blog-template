@@ -13,7 +13,8 @@
   color-scheme: dark;
 }
 a {
-  text-decoration: none;
+  text-decoration: inherit;
+  color: inherit;
 }
 
 .hash-span {
