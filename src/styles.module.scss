@@ -1,0 +1,15 @@
+@use "./styles/colors" as colors;
+.wrapper {
+  position: relative;
+  background-color: colors.$primary;
+}
+.navbarAndHeroSection {
+  background-image: url("/src/assets/herobg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .contactSection {
+    position: absolute;
+    z-index: 0;
+  }
+}
