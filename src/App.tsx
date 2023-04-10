@@ -19,10 +19,10 @@ function App() {
           <Navbar />
           <Hero />
         </div>
-        {/* <About />
+        <About />
         <Experience />
         <Tech />
-        <Works />
+        {/* <Works />
         <Feedbacks />
         <div className={classes.contactSection}>
           <Contact />
