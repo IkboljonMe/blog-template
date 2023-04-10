@@ -1,5 +1,5 @@
 import { Html, useProgress } from "@react-three/drei";
-
+import classes from "./styles.module.scss";
 const CanvasLoader = () => {
   const { progress } = useProgress();
   return (
@@ -13,7 +13,7 @@ const CanvasLoader = () => {
         flexDirection: "column",
       }}
     >
-      <span className="canvas-loader"></span>
+      <span className={classes.canvasLoader}></span>
       <p
         style={{
           fontSize: 14,
