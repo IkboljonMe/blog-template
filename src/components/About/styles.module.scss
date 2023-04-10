@@ -1,0 +1,54 @@
+@use "../../styles/global" as global;
+@use "../../styles/colors" as colors;
+@use "../../styles/breakpoints" as bp;
+.sectionSubText {
+  @include global.sectionSubText;
+}
+.sectionHeadText {
+  @include global.sectionHeadText;
+}
+.cardWrapper {
+  width: 100%;
+  @include global.green_pink_gradient;
+  padding: 1px;
+  border-radius: 20px;
+  .card {
+    background: colors.$tertiary;
+    border-radius: 20px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    min-height: 280px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    img {
+      width: 4rem;
+      height: 4rem;
+      object-fit: contain;
+    }
+  }
+  h3 {
+    color: colors.$white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+.description {
+  margin-top: 1rem;
+  color: colors.$secondary;
+  font-size: 1rem;
+  max-width: bp.$md;
+  line-height: 30px;
+}
+.servicesContainer {
+  margin-top: 5rem;
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  @media (max) {
+  }
+}
