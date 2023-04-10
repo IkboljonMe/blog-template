@@ -49,6 +49,7 @@
   display: grid;
   gap: 2.5rem;
   grid-template-columns: 1fr 1fr 1fr;
-  @media (max) {
+  @media (max-width: bp.$sm) {
+    grid-template-columns: 1fr 1fr;
   }
 }

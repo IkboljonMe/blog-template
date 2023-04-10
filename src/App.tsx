@@ -22,8 +22,8 @@ function App() {
         <About />
         <Experience />
         <Tech />
-        {/* <Works />
-        <Feedbacks />
+        <Works />
+        {/* <Feedbacks />
         <div className={classes.contactSection}>
           <Contact />
           <StarsCanvas />
