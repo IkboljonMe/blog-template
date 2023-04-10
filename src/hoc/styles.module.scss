@@ -1,0 +1,12 @@
+@use "../styles/global" as global;
+@use "../styles/breakpoints" as bp;
+.sectionMotion {
+  @include global.padding;
+  max-width: bp.$lg;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+}
+.hashSpan {
+  @include global.hash_span;
+}
