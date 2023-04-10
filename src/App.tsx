@@ -19,7 +19,7 @@ function App() {
           <Navbar />
           <Hero />
         </div>
-        <About />
+        {/* <About />
         <Experience />
         <Tech />
         <Works />
@@ -27,7 +27,7 @@ function App() {
         <div className={classes.contactSection}>
           <Contact />
           <StarsCanvas />
-        </div>
+        </div> */}
       </div>
     </BrowserRouter>
   );
