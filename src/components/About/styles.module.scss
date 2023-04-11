@@ -45,11 +45,13 @@
   line-height: 30px;
 }
 .servicesContainer {
+  display: flex;
   margin-top: 5rem;
   display: grid;
   gap: 2.5rem;
   grid-template-columns: 1fr 1fr 1fr;
   @media (max-width: bp.$sm) {
     grid-template-columns: 1fr 1fr;
+    display: none;
   }
 }

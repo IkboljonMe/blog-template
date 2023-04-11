@@ -59,7 +59,9 @@ const About = () => {
         create efficient, scalable, and user-friendly solutions that solve
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
-
+      {/* {
+        TODO: FIX DEVICE
+      } */}
       <div className={classes.servicesContainer}>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
