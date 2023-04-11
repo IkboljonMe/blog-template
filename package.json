@@ -22,6 +22,7 @@
     "math-random": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.3",
     "react-router-dom": "^6.10.0",
     "react-tilt": "^1.0.2",
     "react-vertical-timeline-component": "^3.6.0",

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ComputersCanvas } from "../canvas";
+import { ErrorBoundary } from "react-error-boundary";
 import classes from "./styles.module.scss";
 
 const Hero = () => {
@@ -22,8 +23,9 @@ const Hero = () => {
           </p>
         </div>
       </div>
-
-      <ComputersCanvas />
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
+        <ComputersCanvas />
+      </ErrorBoundary>
 
       <div className={classes.bottomBtnContainer}>
         <a href="#about" className={classes.btnDown}>
