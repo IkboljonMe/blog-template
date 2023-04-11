@@ -13,11 +13,12 @@ const Hero = () => {
 
         <div>
           <h1 className={classes.heroHeadText}>
-            Hi, I'm <span className={classes.heroName}>Adrian</span>
+            Hi, I'm <span className={classes.heroName}>Ikboljon</span>
           </h1>
           <p className={classes.heroSubText}>
-            I develop 3D visuals, user <br className="sm:block hidden" />
-            interfaces and web applications
+            I develop responsive interfaces,
+            <br className="sm:block hidden" />
+            backend and frontend applications
           </p>
         </div>
       </div>
