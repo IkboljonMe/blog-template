@@ -23,11 +23,11 @@ function App() {
         <Experience />
         <Tech />
         <Works />
-        {/* <Feedbacks />
+        <Feedbacks />
         <div className={classes.contactSection}>
           <Contact />
           <StarsCanvas />
-        </div> */}
+        </div>
       </div>
     </BrowserRouter>
   );
