@@ -21,6 +21,7 @@ export type Experience = {
 export type Testimonial = {
   testimonial: string;
   name: string;
+  surname: string;
   designation: string;
   company: string;
   image: string;
