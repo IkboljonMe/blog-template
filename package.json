@@ -15,6 +15,7 @@
     "@types/math-random": "^1.0.0",
     "@types/react-vertical-timeline-component": "^3.3.3",
     "@types/three": "^0.150.1",
+    "@types/yauzl": "^2.10.0",
     "clsx": "^1.2.1",
     "emailjs": "^4.0.1",
     "framer-motion": "^10.11.2",
