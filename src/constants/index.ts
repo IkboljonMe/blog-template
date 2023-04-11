@@ -27,9 +27,9 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
+  guess,
+  portfolio,
+  eCommerce,
   threejs,
 } from "../assets";
 
@@ -54,16 +54,12 @@ const services: Service[] = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Frontend",
     icon: mobile,
   },
   {
     title: "Backend Developer",
     icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
   },
 ];
 
@@ -124,50 +120,35 @@ const technologies: Technology[] = [
 
 const experiences: Experience[] = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Volunteer Software Developer",
+    company_name: "School Authorities  -  INTERNSHIP",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "December 2019 - April 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Developed a real-time blog project for a school using WordPress, utilizing plugins to meet specific requirements and improve functionality",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designed the UI of web-based applications using CSS, with a focus on creating responsive layouts. Also identified non-responsive parts of the project and implemented responsive design updates to improve the user experience..",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "Web developer",
+    company_name: "Radcode  -  PART-TIME ",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Sep 2022 - present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Contributed to the creation of high-quality web-based applications and software solutions for clients, utilizing React, Prisma and PostgreSQL. Optimized specific parts of project to enhance performance and user experience.",
+      "Implemented multi-stage services in Docker containerization to optimize debugging and caching, leading to a more efficient workflow with reduced caching time and faster debugging.",
+      "Refactored the HTTP requests to RESTful services in multiple projects to conform to industry standards and utilized external libraries like SWR and React Query to simplify data management and improve code quality.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
+    title: "Software Developer",
+    company_name: "BI-code  -  SELF-EMPLOYED",
     icon: shopify,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -209,37 +190,33 @@ const testimonials: Testimonial[] = [
 
 const projects: Project[] = [
   {
-    name: "Car Rent",
+    name: "Guees game",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Let's play Guess my number game. Guess number between 0 to 20",
     tags: [
       {
-        name: "react",
+        name: "vanilla-javascript",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "css",
         color: "green-text-gradient",
       },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: guess,
+    source_code_link: "https://github.com/IkboljonMe/guess-number-web",
   },
   {
-    name: "Job IT",
+    name: "Portfolio",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Beatifull portfolio website with React+Nextjs. Build your own",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "redux",
         color: "green-text-gradient",
       },
       {
@@ -247,13 +224,12 @@ const projects: Project[] = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: portfolio,
+    source_code_link: "https://github.com/IkboljonMe/commerce-project-web",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    name: "E-Commerce",
+    description: "UzShop E-commerce shop with React. Fully responsive",
     tags: [
       {
         name: "nextjs",
@@ -268,8 +244,8 @@ const projects: Project[] = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: eCommerce,
+    source_code_link: "https://github.com/IkboljonMe/commerce-project-web",
   },
 ];
 
