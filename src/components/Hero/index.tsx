@@ -17,9 +17,9 @@ const Hero = () => {
             Hi, I'm <span className={classes.heroName}>Ikboljon</span>
           </h1>
           <p className={classes.heroSubText}>
-            I develop responsive interfaces,
+            a passionate developer who loves,
             <br className="sm:block hidden" />
-            backend and frontend applications
+            bringing ideas into reality through code
           </p>
         </div>
       </div>
