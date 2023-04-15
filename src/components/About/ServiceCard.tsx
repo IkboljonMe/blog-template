@@ -25,8 +25,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         className={classes.cardWrapper}
       >
         <div className={classes.card}>
-          <img src={icon} alt="web-development" />
-          <h3>{title}</h3>
+          <h3>Backend Development</h3>
+          <div></div>
+          <p>Reactjs</p>
+          <p>Experienced</p>
         </div>
       </motion.div>
     </Tilt>
