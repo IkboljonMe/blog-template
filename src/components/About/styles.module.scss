@@ -3,8 +3,10 @@
 @use "../../styles/breakpoints" as bp;
 .sectionSubText {
   @include global.sectionSubText;
+  text-align: center;
 }
 .sectionHeadText {
+  text-align: center;
   @include global.sectionHeadText;
 }
 .cardWrapper {
@@ -38,10 +40,11 @@
   }
 }
 .description {
+  width: 100%;
   margin-top: 1rem;
   color: colors.$secondary;
   font-size: 1rem;
-  max-width: bp.$md;
+  // max-width: bp.$md;
   line-height: 30px;
 }
 .servicesContainer {

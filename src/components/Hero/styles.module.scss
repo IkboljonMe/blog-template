@@ -12,13 +12,17 @@
     @include global.paddingX;
     position: absolute;
     top: 7.5rem;
-    max-width: bp.$xl;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     flex-direction: row;
     align-items: start;
     gap: 1.25rem;
+    margin-left: 18.5rem;
+    @media (max-width: bp.$xs) {
+      margin-left: 1rem;
+    }
+    @media (max-width: bp.$md) {
+      margin-left: 2 rem;
+    }
     .dividerSection {
       display: flex;
       flex-direction: column;
@@ -36,7 +40,7 @@
         height: 20rem;
         @include global.violet_gradient;
         @media (max-width: bp.$sm) {
-          height: 10rem;
+          height: 15rem;
         }
       }
     }
@@ -49,7 +53,7 @@
     }
     .heroSubText {
       @include global.heroSubText;
-      margin-top: 0.5rem;
+      // margin-top: 0.2rem;
       color: colors.$white-100;
     }
   }
@@ -60,8 +64,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (min-width: bp.$xs) {
-      bottom: 2.5rem;
+    @media (max-width: bp.$xs) {
+      bottom: 2rem;
     }
     .btnDown {
       width: 35px;
@@ -71,12 +75,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @media (max-width: bp.$sm) {
+        border: 2.5px solid colors.$secondary;
+        border-radius: 1.5rem;
+        width: 20px;
+        height: 50px;
+      }
       div {
         width: 0.75rem;
         height: 0.75rem;
         border-radius: 9999px;
         margin-bottom: 2rem;
         background: colors.$secondary;
+        @media (max-width: bp.$sm) {
+          width: 0.5rem;
+          height: 0.5rem;
+        }
       }
     }
   }

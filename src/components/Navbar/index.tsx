@@ -42,8 +42,8 @@ const Navbar = () => {
         >
           <img className={classes.favIcon} src={logo} alt="logo" />
           <p className={classes.title}>
-            Portfolio &nbsp;
-            <span className={classes.description}>| Ikboljon Abdurasulov</span>
+            IkboljonMe &nbsp;
+            <span className={classes.description}>| &nbsp; Portfolio</span>
           </p>
         </Link>
 

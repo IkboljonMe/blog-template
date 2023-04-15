@@ -79,9 +79,11 @@
     @include gloabal.padding;
     p {
       @include gloabal.sectionSubText;
+      text-align: center;
     }
     h2 {
       @include gloabal.sectionHeadText;
+      text-align: center;
     }
   }
   .feedBacksContainer {
