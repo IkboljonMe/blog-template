@@ -12,13 +12,17 @@
     @include global.paddingX;
     position: absolute;
     top: 7.5rem;
-    max-width: bp.$xl;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     flex-direction: row;
     align-items: start;
     gap: 1.25rem;
+    margin-left: 18.5rem;
+    @media (max-width: bp.$xs) {
+      margin-left: 1rem;
+    }
+    @media (max-width: bp.$md) {
+      margin-left: 2 rem;
+    }
     .dividerSection {
       display: flex;
       flex-direction: column;
@@ -36,7 +40,7 @@
         height: 20rem;
         @include global.violet_gradient;
         @media (max-width: bp.$sm) {
-          height: 10rem;
+          height: 15rem;
         }
       }
     }
@@ -49,7 +53,7 @@
     }
     .heroSubText {
       @include global.heroSubText;
-      margin-top: 0.5rem;
+      // margin-top: 0.2rem;
       color: colors.$white-100;
     }
   }
