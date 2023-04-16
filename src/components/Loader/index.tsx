@@ -1,29 +1,18 @@
 import { Html, useProgress } from "@react-three/drei";
-import classes from "./styles.module.scss";
+
+import ProgressBar from "@ramonak/react-progress-bar";
+// import classes from "./styles.module.scss";
 const CanvasLoader = () => {
   const { progress } = useProgress();
   return (
     <Html
       as="div"
       center
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
+      style={{ display: "block", width: "90px", textAlign: "center" }}
     >
-      <span className={classes.canvasLoader}></span>
-      <p
-        style={{
-          fontSize: 14,
-          color: "#F1F1F1",
-          fontWeight: 800,
-          marginTop: 40,
-        }}
-      >
-        {progress.toFixed(2)}%
-      </p>
+      <span style={{ width: "90px" }}>
+        <ProgressBar completed={progress.toFixed()} />
+      </span>
     </Html>
   );
 };
