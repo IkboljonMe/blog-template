@@ -37,3 +37,17 @@ export type Project = {
   image: any;
   source_code_link: string;
 };
+type SkillProject = {
+  name: string;
+  link: string;
+};
+
+export type DevelopmentData = {
+  name: string;
+  icon: any;
+  projects: SkillProject[];
+};
+export type Skill = {
+  name: string;
+  data: DevelopmentData[];
+};
