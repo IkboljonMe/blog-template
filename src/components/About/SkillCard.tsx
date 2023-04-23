@@ -5,7 +5,7 @@ import classes from "./styles.module.scss";
 import { fadeIn } from "../../utils/motion";
 import { Link } from "react-router-dom";
 import { DevelopmentData } from "../../constants/index.types";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+
 interface SkillCardProps {
   development: { name: string; data: DevelopmentData[] };
   index: number;
