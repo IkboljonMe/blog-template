@@ -5,7 +5,7 @@ import classes from "./styles.module.scss";
 import { fadeIn } from "../../utils/motion";
 import { Link } from "react-router-dom";
 import { DevelopmentData } from "../../constants/index.types";
-
+import { HiExternalLink } from "react-icons/hi";
 interface SkillCardProps {
   development: { name: string; data: DevelopmentData[] };
   index: number;
@@ -37,8 +37,10 @@ const SkillCard: React.FC<SkillCardProps> = ({ development, index }) => {
               <div className={classes.projects}>
                 {projects.map(({ name, link }, index) => (
                   <Link key={index} to={link}>
-                    <motion.div whileHover={{ scale: 1.2 }}>{name}</motion.div>
-                    <span>{/* <OpenInNewIcon /> */}</span>
+                    <motion.div whileHover={{ scale: 1.2 }}>
+                      {name}
+                      <HiExternalLink />
+                    </motion.div>
                   </Link>
                 ))}
               </div>

@@ -42,7 +42,7 @@ const Navbar = () => {
         >
           <img className={classes.favIcon} src={logo} alt="logo" />
           <p className={classes.title}>
-            IkboljonMe &nbsp;
+            Ikboljon<p>Me</p> &nbsp;
             <span className={classes.description}>| &nbsp; Portfolio</span>
           </p>
         </Link>

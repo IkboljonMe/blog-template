@@ -2,27 +2,24 @@ import { motion } from "framer-motion";
 import { ComputersCanvas } from "../canvas";
 import { ErrorBoundary } from "react-error-boundary";
 import classes from "./styles.module.scss";
+import { BsGithub, BsLinkedin, BsTelegram, BsYoutube } from "react-icons/bs";
 
 const Hero = () => {
   return (
     <section className={classes.heroSectionWrapper}>
-      <div className={classes.heroTopContainer}>
-        <div className={classes.dividerSection}>
-          <div className={classes.circleTop} />
-          <div className={classes.longDivider} />
-        </div>
-
+      <div className={classes.lgHeroTopContainer}>
+        <h1>
+          I'm <span>Ikboljon Abdurasulov</span>
+        </h1>
+        <h2>Software Engineer</h2>
         <div>
-          <h1 className={classes.heroHeadText}>
-            Hi, I'm <span className={classes.heroName}>Ikboljon</span>
-          </h1>
-          <p className={classes.heroSubText}>
-            a passionate developer who loves,
-            <br className="sm:block hidden" />
-            bringing ideas into reality through code
-          </p>
+          <BsGithub />
+          <BsLinkedin />
+          <BsTelegram />
+          <BsYoutube />
         </div>
       </div>
+
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <ComputersCanvas />
       </ErrorBoundary>

@@ -24,8 +24,8 @@
       align-items: center;
       gap: 0.5rem;
       .favIcon {
-        width: 36px;
-        height: 36px;
+        width: 24px;
+        height: 24px;
         object-fit: contain;
       }
       .title {
@@ -38,6 +38,9 @@
           @media (max-width: bp.$sm) {
             display: none;
           }
+        }
+        p {
+          color: colors.$logo;
         }
       }
     }
