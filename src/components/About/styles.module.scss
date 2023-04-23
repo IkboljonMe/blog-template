@@ -46,8 +46,10 @@
       .projects {
         display: flex;
         div {
-          padding-right: 4px;
-          padding-right: 4px;
+          padding-right: 6px;
+          padding-right: 6px;
+          display: flex;
+          align-items: center;
         }
       }
     }
