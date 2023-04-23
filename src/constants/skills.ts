@@ -1,17 +1,19 @@
-import node from "../assets/skills/nodejs.svg";
-import expressjs from "../assets/skills/expressjs.svg";
-import prisma from "../assets/skills/prisma.svg";
-import postgresql from "../assets/skills/postgresql.svg";
-import nextjs from "../assets/skills/nextjs.svg";
-import react from "../assets/skills/react.svg";
 import { Skill } from "./index.types";
+import {
+  skillNextjs,
+  skillPostgreSQL,
+  skillPrisma,
+  skillReactjs,
+  skillNodejs,
+  skillExpress,
+} from "../assets/skills";
 const skills: Skill[] = [
   {
     name: "Backend developer",
     data: [
       {
         name: "Nodejs",
-        icon: node,
+        icon: skillNodejs,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "Blog", link: "https://myblog.com" },
@@ -19,7 +21,7 @@ const skills: Skill[] = [
       },
       {
         name: "Express",
-        icon: expressjs,
+        icon: skillExpress,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "Blog", link: "https://myblog.com" },
@@ -27,7 +29,7 @@ const skills: Skill[] = [
       },
       {
         name: "PostgreSQL",
-        icon: postgresql,
+        icon: skillPostgreSQL,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "BlogUz", link: "https://myblog.com" },
@@ -35,7 +37,7 @@ const skills: Skill[] = [
       },
       {
         name: "Prisma",
-        icon: prisma,
+        icon: skillPrisma,
         projects: [
           { name: "UzShop", link: "https://auction.com" },
           { name: "News", link: "https://myblog.com" },
@@ -47,8 +49,8 @@ const skills: Skill[] = [
     name: "Front-end developer",
     data: [
       {
-        name: "Nexts",
-        icon: nextjs,
+        name: "Nextjs",
+        icon: skillNextjs,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "App", link: "https://myblog.com" },
@@ -56,7 +58,7 @@ const skills: Skill[] = [
       },
       {
         name: "Reactjs",
-        icon: react,
+        icon: skillReactjs,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "Portfolio", link: "https://myblog.com" },
