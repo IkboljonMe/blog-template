@@ -5,6 +5,7 @@ import {
   Experience,
   Testimonial,
   Project,
+  Skill,
 } from "./index.types";
 import {
   mobile,
@@ -32,7 +33,12 @@ import {
   eCommerce,
   threejs,
 } from "../assets";
-
+import node from "../assets/skills/nodejs.svg";
+import expressjs from "../assets/skills/expressjs.svg";
+import prisma from "../assets/skills/prisma.svg";
+import postgresql from "../assets/skills/postgresql.svg";
+import nextjs from "../assets/skills/nextjs.svg";
+import react from "../assets/skills/react.svg";
 export const navLinks: NavLink[] = [
   {
     id: "about",
@@ -48,18 +54,64 @@ export const navLinks: NavLink[] = [
   },
 ];
 
-const services: Service[] = [
+const skills: Skill[] = [
   {
-    title: "Web Developer",
-    icon: web,
+    name: "Backend developer",
+    data: [
+      {
+        name: "Nodejs",
+        icon: node,
+        projects: [
+          { name: "Auction", link: "https://auction.com" },
+          { name: "Blog", link: "https://myblog.com" },
+        ],
+      },
+      {
+        name: "Express",
+        icon: expressjs,
+        projects: [
+          { name: "Auction", link: "https://auction.com" },
+          { name: "Blog", link: "https://myblog.com" },
+        ],
+      },
+      {
+        name: "PostgreSQL",
+        icon: postgresql,
+        projects: [
+          { name: "Auction", link: "https://auction.com" },
+          { name: "BlogUz", link: "https://myblog.com" },
+        ],
+      },
+      {
+        name: "Prisma",
+        icon: prisma,
+        projects: [
+          { name: "UzShop", link: "https://auction.com" },
+          { name: "News", link: "https://myblog.com" },
+        ],
+      },
+    ],
   },
   {
-    title: "Frontend",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
+    name: "Front-end developer",
+    data: [
+      {
+        name: "Nexts",
+        icon: nextjs,
+        projects: [
+          { name: "Auction", link: "https://auction.com" },
+          { name: "App", link: "https://myblog.com" },
+        ],
+      },
+      {
+        name: "Reactjs",
+        icon: react,
+        projects: [
+          { name: "Auction", link: "https://auction.com" },
+          { name: "Portfolio", link: "https://myblog.com" },
+        ],
+      },
+    ],
   },
 ];
 
@@ -249,4 +301,4 @@ const projects: Project[] = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { skills, technologies, experiences, testimonials, projects };

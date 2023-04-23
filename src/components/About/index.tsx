@@ -1,12 +1,11 @@
 import React from "react";
 
 import { motion } from "framer-motion";
-
-import { services } from "../../constants";
 import { SectionWrapper } from "../../hoc";
 import { fadeIn, textVariant } from "../../utils/motion";
 import classes from "./styles.module.scss";
-import ServiceCard from "./ServiceCard";
+import SkillCard from "./SkillCard";
+import { skills } from "../../constants";
 
 const About = () => {
   return (
@@ -20,8 +19,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className={classes.description}
       >
-        Sure, here's a revised version that uses linking words to keep the
-        meaning: I have expertise in using popular programming languages such as
+        I have expertise in using popular programming languages such as
         TypeScript, JavaScript, and Python. As an experienced software
         developer, I have worked with various frameworks like React, Next.js,
         and Node.js. Additionally, I am also experienced in writing tests using
@@ -43,8 +41,8 @@ const About = () => {
         TODO: FIX DEVICE
       } */}
       <div className={classes.servicesContainer}>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} service={service} />
+        {skills.map((development, index) => (
+          <SkillCard development={development} index={index} />
         ))}
       </div>
     </>
