@@ -1,5 +1,4 @@
-import { Testimonial, Project } from "./index.types";
-import { guess, portfolio, eCommerce } from "../assets";
+import { Testimonial } from "./index.types";
 
 const testimonials: Testimonial[] = [
   {

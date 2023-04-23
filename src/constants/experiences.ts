@@ -1,10 +1,10 @@
-import { starbucks, tesla, shopify } from "../assets";
 import { Experience } from "./index.types";
+import node from "../assets/skills/nodejs.svg";
 const experiences: Experience[] = [
   {
     title: "Volunteer Software Developer",
     company_name: "School Authorities  -  INTERNSHIP",
-    icon: starbucks,
+    icon: node,
     iconBg: "#383E56",
     date: "December 2019 - April 2021",
     points: [
@@ -16,7 +16,7 @@ const experiences: Experience[] = [
   {
     title: "Web developer",
     company_name: "Radcode  -  PART-TIME ",
-    icon: tesla,
+    icon: node,
     iconBg: "#E6DEDD",
     date: "Sep 2022 - present",
     points: [
@@ -28,7 +28,7 @@ const experiences: Experience[] = [
   {
     title: "Software Developer",
     company_name: "BI-code  -  SELF-EMPLOYED",
-    icon: shopify,
+    icon: node,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
     points: [

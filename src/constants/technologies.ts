@@ -12,7 +12,6 @@ import {
   git,
   figma,
   docker,
-  threejs,
 } from "../assets";
 const technologies: Technology[] = [
   {
@@ -50,10 +49,6 @@ const technologies: Technology[] = [
   {
     name: "MongoDB",
     icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
   },
   {
     name: "git",

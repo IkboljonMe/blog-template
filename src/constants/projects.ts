@@ -1,5 +1,5 @@
 import { Project } from "./index.types";
-import { guess, portfolio, eCommerce } from "../assets";
+import node from "../assets/skills/nodejs.svg";
 const projects: Project[] = [
   {
     name: "Guees game",
@@ -15,7 +15,7 @@ const projects: Project[] = [
         color: "green-text-gradient",
       },
     ],
-    image: guess,
+    image: node,
     source_code_link: "https://github.com/IkboljonMe/guess-number-web",
   },
   {
@@ -36,7 +36,7 @@ const projects: Project[] = [
         color: "pink-text-gradient",
       },
     ],
-    image: portfolio,
+    image: node,
     source_code_link: "https://github.com/IkboljonMe/commerce-project-web",
   },
   {
@@ -56,7 +56,7 @@ const projects: Project[] = [
         color: "pink-text-gradient",
       },
     ],
-    image: eCommerce,
+    image: node,
     source_code_link: "https://github.com/IkboljonMe/commerce-project-web",
   },
 ];
