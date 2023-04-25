@@ -2,28 +2,51 @@ import { motion } from "framer-motion";
 import { ComputersCanvas } from "../canvas";
 import { ErrorBoundary } from "react-error-boundary";
 import classes from "./styles.module.scss";
+import { socialLinks } from "../../constants";
+import { Link } from "react-router-dom";
+import { SocialLink } from "../../constants/index.types";
 import { BsGithub, BsLinkedin, BsTelegram, BsYoutube } from "react-icons/bs";
+const getIcon = (name: string) => {
+  if (name == "Telegram") {
+    return <BsTelegram />;
+  }
+  if (name == "Github") {
+    return <BsGithub />;
+  }
+  if (name == "Linkedin") {
+    return <BsLinkedin />;
+  }
+  if (name == "Youtube") {
+    return <BsYoutube />;
+  } else {
+    return;
+  }
+};
 
 const Hero = () => {
   return (
     <section className={classes.heroSectionWrapper}>
       <div className={classes.lgHeroTopContainer}>
-        <h1>
-          I'm <span>Ikboljon Abdurasulov</span>
-        </h1>
+        <p>Hi, I'm</p>
+        <h1>Ikboljon Abdurasulov</h1>
         <h2>Software Engineer</h2>
         <div>
-          <BsGithub />
-          <BsLinkedin />
-          <BsTelegram />
-          <BsYoutube />
+          {socialLinks.map((link: SocialLink) => (
+            <Link to={link.link}>
+              <motion.i
+                whileHover={{
+                  scale: 1.2,
+                }}
+              >
+                {getIcon(link.name)}
+              </motion.i>
+            </Link>
+          ))}
         </div>
       </div>
-
-      <ErrorBoundary fallback={<div>Something went wrong</div>}>
+      <div className={classes.computer}>
         <ComputersCanvas />
-      </ErrorBoundary>
-
+      </div>
       <div className={classes.bottomBtnContainer}>
         <a href="#about" className={classes.btnDown}>
           <motion.div
