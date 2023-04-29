@@ -51,3 +51,8 @@ export type Skill = {
   name: string;
   data: DevelopmentData[];
 };
+export type SocialLink = {
+  name: string;
+  icon: any;
+  link: string;
+};

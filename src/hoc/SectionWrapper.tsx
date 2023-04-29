@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { staggerContainer } from "../utils/motion";
 import classes from "./styles.module.scss";
-
+//We can call this HOC design pattern:
 const StarWrapper = (Component: any, idName: string) =>
   function HOC() {
     return (
