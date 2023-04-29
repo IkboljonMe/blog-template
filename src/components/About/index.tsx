@@ -1,5 +1,3 @@
-import React from "react";
-
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../../hoc";
 import { fadeIn, textVariant } from "../../utils/motion";
