@@ -1,3 +1,71 @@
+@use "../../../styles/breakpoints" as bp;
+@use "../../../styles/colors" as colors;
 .wrapper {
-  color: red;
+  max-width: bp.$lg;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+  margin-top: 20px;
+}
+.imageContainer {
+  margin-top: 50px;
+  display: flex;
+  gap: 40px;
+  img {
+    max-width: 140px;
+    max-height: 140px;
+    border-radius: 999px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-size: 40px;
+      color: colors.$black200;
+      font-weight: 700;
+    }
+    p {
+      font-size: 30px;
+      color: colors.$black-grey;
+    }
+    div {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 10px;
+      a {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+}
+.buttonsContainer {
+  margin-top: 50px;
+  p {
+    font-size: 20px;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 20px;
+    button {
+      border: none;
+      border-radius: 3px;
+      width: 140px;
+      height: 42.5px;
+      border: solid 1px#1e90ff;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .blog {
+      background: #1e90ff;
+      color: white;
+    }
+    .portfolio {
+      background: white;
+      color: #1e90ff;
+    }
+  }
 }
