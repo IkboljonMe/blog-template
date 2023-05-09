@@ -16,6 +16,9 @@
     max-height: 140px;
     border-radius: 999px;
   }
+  .imgRotation {
+    animation: rotation 40s infinite linear;
+  }
   div {
     display: flex;
     flex-direction: column;
@@ -67,5 +70,13 @@
       background: white;
       color: #1e90ff;
     }
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
   }
 }
