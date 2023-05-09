@@ -16,5 +16,8 @@
       font-size: 18px;
       color: colors.$black-grey;
     }
+    li:hover {
+      color: colors.$black200;
+    }
   }
 }

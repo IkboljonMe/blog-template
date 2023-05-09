@@ -4,6 +4,7 @@ import classes from "./styles.module.scss";
 import { BsGithub, BsYoutube, BsTelegram, BsLinkedin } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 const Main = () => {
   const [isRotating, setIsRotating] = useState(false);
@@ -11,7 +12,8 @@ const Main = () => {
     <div className={classes.wrapper}>
       <Navbar />
       <section className={classes.imageContainer}>
-        <img
+        <motion.img
+          whileHover={{ scale: 1.04 }}
           onClick={() => {
             setIsRotating(!isRotating);
           }}
@@ -23,29 +25,44 @@ const Main = () => {
           <h1>Ikboljon Abdurasulov</h1>
           <p>Software Engineer</p>
           <div>
-            <Link to="https://www.linkedin.com/in/ikboljonme/">
-              <BsLinkedin size="3x" />
-            </Link>
-            <Link to="">
-              <BsGithub size="3x" />
-            </Link>
-            <Link to="">
-              <BsTelegram size="3x" />
-            </Link>
-            <Link to="/">
-              <BsYoutube size="3x" />
-            </Link>
+            <motion.i whileHover={{ scale: 1.1 }}>
+              <Link to="https://www.linkedin.com/in/ikboljonme/">
+                <BsLinkedin size="24" />
+              </Link>
+            </motion.i>
+            <motion.i whileHover={{ scale: 1.1 }}>
+              <Link to="">
+                <BsGithub size="24" />
+              </Link>
+            </motion.i>
+            <motion.i whileHover={{ scale: 1.1 }}>
+              <Link to="">
+                <BsTelegram size="24" />
+              </Link>
+            </motion.i>
+            <motion.i whileHover={{ scale: 1.1 }}>
+              <Link to="/">
+                <BsYoutube size="24" />
+              </Link>
+            </motion.i>
           </div>
         </div>
       </section>
       <section className={classes.buttonsContainer}>
-        <p> Computers are fast; developers keep them slow</p>
+        <p> Computers are fast. Developers keep them slow</p>
         <div>
           <Link to="/blog">
-            <button className={classes.blog}>Read blog</button>
+            <motion.button whileHover={{ scale: 1.1 }} className={classes.blog}>
+              Read blog
+            </motion.button>
           </Link>
           <Link to="/portfolio">
-            <button className={classes.portfolio}>Portfolio</button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              className={classes.portfolio}
+            >
+              Portfolio
+            </motion.button>
           </Link>
         </div>
       </section>
