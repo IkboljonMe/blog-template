@@ -39,10 +39,14 @@ const Main = () => {
         </div>
       </section>
       <section className={classes.buttonsContainer}>
-        <p> Yeey. It's IkboljonMe. Check my portfolio or thouths below</p>
+        <p> Computers are fast; developers keep them slow</p>
         <div>
-          <button className={classes.blog}>Read blog</button>
-          <button className={classes.portfolio}>Portfolio</button>
+          <Link to="/blog">
+            <button className={classes.blog}>Read blog</button>
+          </Link>
+          <Link to="/portfolio">
+            <button className={classes.portfolio}>Portfolio</button>
+          </Link>
         </div>
       </section>
     </div>
