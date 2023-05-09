@@ -1,0 +1,20 @@
+@use "../../../styles/colors" as colors;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  p {
+    font-size: 25px;
+    font-weight: 700;
+    color: colors.$black100;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    li {
+      font-size: 18px;
+      color: colors.$black200;
+    }
+  }
+}
