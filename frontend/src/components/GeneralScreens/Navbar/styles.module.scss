@@ -11,9 +11,12 @@
   ul {
     display: flex;
     list-style: none;
-    gap: 1rem;
+    gap: 30px;
     li {
       font-size: 18px;
+      color: colors.$black-grey;
+    }
+    li:hover {
       color: colors.$black200;
     }
   }
