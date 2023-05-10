@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import classes from "./styles.module.scss";
 import MainSection from "./MainSection";
 
-const Main = () => {
+const MainPage = () => {
   return (
     <div className={classes.wrapper}>
       <Navbar />
@@ -15,4 +15,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MainPage;
