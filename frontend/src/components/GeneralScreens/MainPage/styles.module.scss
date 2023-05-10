@@ -1,12 +1,12 @@
 @use "../../../styles/breakpoints" as bp;
 @use "../../../styles/colors" as colors;
 .wrapper {
-  max-width: bp.$lg;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   z-index: 0;
-  position: relative;
   height: 100vh;
+  max-width: bp.$lg;
   overflow: hidden;
   @media (max-width: bp.$lg) {
     max-width: bp.$sm;
@@ -16,13 +16,13 @@
   }
 }
 .imageContainer {
-  padding-top: 180px;
   display: flex;
   flex-direction: row;
+  padding-top: 180px;
   gap: 40px;
   @media (max-width: bp.$sm) {
-    padding-top: 160px;
     flex-direction: column;
+    padding-top: 160px;
     gap: 0px;
   }
   img {
@@ -43,8 +43,8 @@
 
     h1 {
       font-size: 40px;
-      color: colors.$black200;
       font-weight: 700;
+      color: colors.$black200;
       @media (max-width: bp.$lg) {
         font-size: 25px;
       }
@@ -57,9 +57,9 @@
       }
     }
     div {
-      padding-top: 10px;
       display: flex;
       flex-direction: row;
+      padding-top: 10px;
       width: 100%;
       gap: 10px;
       a {
@@ -82,10 +82,10 @@
     margin-top: 20px;
     button {
       border: none;
-      border-radius: 3px;
       width: 140px;
       height: 42.5px;
       border: solid 1px#1e90ff;
+      border-radius: 3px;
       font-size: 18px;
       font-weight: 700;
       cursor: pointer;
