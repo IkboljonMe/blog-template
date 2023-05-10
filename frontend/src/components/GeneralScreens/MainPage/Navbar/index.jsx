@@ -12,7 +12,9 @@ const Navbar = () => {
     <>
       <nav className={classes.navbar}>
         <Link to="/">
-          <motion.p whileHover={{ scale: 1.05 }}>Ikboljon's Blog</motion.p>
+          <motion.p whileHover={{ scale: 1.05 }}>
+            Ikboljon<span>Me</span>
+          </motion.p>
         </Link>
         <ul>
           {navbarLinks.map((link, index) => (
