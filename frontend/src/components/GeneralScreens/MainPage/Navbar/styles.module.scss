@@ -2,12 +2,12 @@
 @use "../../../../styles/breakpoints" as bp;
 .navbar {
   display: flex;
+  position: fixed;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   z-index: 999;
-  position: fixed;
   min-height: 80px;
-  top: 0;
   width: 100%;
   max-width: bp.$lg;
   margin-left: auto;
