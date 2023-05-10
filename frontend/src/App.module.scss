@@ -1,1 +1,7 @@
-
+@use "./styles/breakpoints" as bp;
+.app {
+  @media (max-width: bp.$lg) {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+}
