@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import classes from "./styles.module.scss";
 import { motion } from "framer-motion";
+import { HiMenu } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 const navbarLinks = ["Home", "Blog", "Portfolio", "Talks"];
+
 const Navbar = () => {
+  const [menu, setMenu] = useState(false);
   return (
     <nav className={classes.navbar}>
       <Link to="/">
@@ -18,6 +22,26 @@ const Navbar = () => {
           </motion.li>
         ))}
       </ul>
+      <menu>
+        {menu ? (
+          <i
+            onClick={() => {
+              setMenu(!menu);
+            }}
+          >
+            <HiMenu size="25" />
+          </i>
+        ) : (
+          <i>
+            <IoClose
+              size="25"
+              onClick={() => {
+                setMenu(!menu);
+              }}
+            />
+          </i>
+        )}
+      </menu>
     </nav>
   );
 };
