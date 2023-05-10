@@ -6,13 +6,18 @@
   margin-right: auto;
   z-index: 0;
   height: 100vh;
+  width: 100;
   max-width: bp.$lg;
-  overflow: hidden;
+  // overflow: hidden;
   @media (max-width: bp.$lg) {
     max-width: bp.$sm;
   }
   @media (max-width: bp.$sm) {
     max-width: bp.$xs;
+  }
+  @media (max-width: bp.$xs) {
+    max-width: bp.$xxs;
+    margin-right: 20px;
   }
 }
 .imageContainer {
