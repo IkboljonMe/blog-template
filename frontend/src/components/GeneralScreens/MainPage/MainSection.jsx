@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import classes from "./styles.module.scss";
 const MainSection = () => {
-  const [isRotating, setIsRotating] = useState(false);
+  const [isRotating, setIsRotating] = useState(true);
   return (
     <section>
       <section className={classes.imageContainer}>
