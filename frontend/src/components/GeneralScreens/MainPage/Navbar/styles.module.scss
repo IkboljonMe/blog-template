@@ -20,6 +20,10 @@
     font-size: 25px;
     font-weight: 700;
     color: colors.$black100;
+    span {
+      @extend p;
+      color: colors.$logo;
+    }
   }
 
   ul {
