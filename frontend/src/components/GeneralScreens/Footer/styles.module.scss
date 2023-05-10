@@ -1,0 +1,27 @@
+@use "../../../styles/colors" as colors;
+@use "../../../styles/breakpoints" as bp;
+footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 5px;
+  div {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    border-bottom: colors.$black-grey solid 1px;
+  }
+  p {
+    padding-top: 10px;
+    font-size: 18px;
+  }
+  @media (max-width: bp.$lg) {
+    padding-top: 5px;
+    font-size: 10px;
+  }
+}
