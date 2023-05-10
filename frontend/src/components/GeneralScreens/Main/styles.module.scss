@@ -5,16 +5,34 @@
   margin-left: auto;
   margin-right: auto;
   z-index: 0;
-  margin-top: 20px;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  @media (max-width: bp.$lg) {
+    max-width: bp.$sm;
+  }
+  @media (max-width: bp.$sm) {
+    max-width: bp.$xs;
+  }
 }
 .imageContainer {
-  margin-top: 50px;
+  padding-top: 180px;
   display: flex;
+  flex-direction: row;
   gap: 40px;
+  @media (max-width: bp.$sm) {
+    padding-top: 160px;
+    flex-direction: column;
+    gap: 0px;
+  }
   img {
     max-width: 140px;
     max-height: 140px;
     border-radius: 999px;
+    @media (max-width: bp.$lg) {
+      max-width: 100px;
+      max-height: 100px;
+    }
   }
   .imgRotation {
     animation: rotation 40s infinite linear;
@@ -22,16 +40,24 @@
   div {
     display: flex;
     flex-direction: column;
+
     h1 {
       font-size: 40px;
       color: colors.$black200;
       font-weight: 700;
+      @media (max-width: bp.$lg) {
+        font-size: 25px;
+      }
     }
     p {
       font-size: 30px;
       color: colors.$black-grey;
+      @media (max-width: bp.$lg) {
+        font-size: 20px;
+      }
     }
     div {
+      padding-top: 10px;
       display: flex;
       flex-direction: row;
       width: 100%;
@@ -44,9 +70,10 @@
   }
 }
 .buttonsContainer {
-  margin-top: 50px;
   p {
     font-size: 20px;
+    color: colors.$black-grey;
+    padding-top: 20px;
   }
   div {
     display: flex;
