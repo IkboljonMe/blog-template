@@ -1,0 +1,21 @@
+@use "./breakpoints" as bp;
+@import url("https://use.typekit.net/yxi1xih.css");
+
+* {
+  box-sizing: border-box;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0 0;
+  margin: 0 0;
+}
+body {
+  font-family: "source-sans-pro", sans-serif;
+  padding: 0px 200px;
+  @media (max-width: bp.$lg) {
+    padding: 0px 50px;
+  }
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}

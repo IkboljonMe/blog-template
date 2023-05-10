@@ -30,12 +30,12 @@ const Navbar = () => {
                 setMenu(!menu);
               }}
             >
-              <HiMenu size="25" />
+              <HiMenu size="30" />
             </i>
           ) : (
             <i>
               <IoClose
-                size="25"
+                size="30"
                 onClick={() => {
                   setMenu(!menu);
                 }}
