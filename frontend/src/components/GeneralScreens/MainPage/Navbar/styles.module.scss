@@ -2,19 +2,19 @@
 @use "../../../../styles/breakpoints" as bp;
 .navbar {
   display: flex;
+  flex-direction: row;
   position: fixed;
-  top: 0;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   z-index: 999;
   min-height: 80px;
   width: 100%;
-  max-width: bp.$lg;
-  margin-left: auto;
-  margin-right: auto;
+  left: 0;
   background-color: colors.$primary-bg;
+  padding: 0px 200px;
   @media (max-width: bp.$lg) {
-    max-width: bp.$sm;
+    padding: 0px 30px;
   }
   p {
     font-size: 25px;
@@ -24,60 +24,48 @@
 
   ul {
     display: flex;
+    flex-direction: row;
     list-style: none;
     gap: 30px;
-    margin-right: 10px;
     @media (max-width: bp.$sm) {
       display: none;
     }
     li {
       font-size: 18px;
       color: colors.$black-grey;
-    }
-    li:hover {
-      color: colors.$black200;
+
+      &:hover {
+        color: colors.$black200;
+      }
     }
   }
   menu {
+    margin-top: 5px;
     display: none;
     @media (max-width: bp.$sm) {
-      margin-right: 100px;
-      display: flex;
-    }
-    @media (max-width: bp.$xxs) {
-      margin-right: 50px;
       display: flex;
     }
   }
   .menuSection {
-    padding-top: 10px;
-    padding-bottom: 10px;
     display: none;
     flex-direction: column;
-    gap: 10px;
-    max-width: bp.$xs;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 120px;
+    padding-right: 100px;
+    gap: 30px;
     width: 100%;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
+    position: fixed;
     top: 80px;
+    z-index: 999;
     background-color: colors.$primary-bg;
-    div {
-      max-width: bp.$xs;
-      width: 100%;
-      margin: 0 auto;
-      align-items: center;
-      border-bottom: colors.$black-grey solid 1px;
-    }
+    height: 100%;
     p {
       font-size: 18px;
       color: colors.$black-grey;
     }
     @media (max-width: bp.$sm) {
       display: flex;
-    }
-    @media (max-width: bp.$xs) {
-      max-width: 360px;
     }
   }
 }
