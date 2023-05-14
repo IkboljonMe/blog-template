@@ -1,9 +1,9 @@
 import classes from "./App.module.scss";
-import MainPage from "./components/GeneralScreens/MainPage/index";
+import HomePage from "./pages/home";
 function App() {
   return (
     <div className={classes.app}>
-      <MainPage />
+      <HomePage />
     </div>
   );
 }
