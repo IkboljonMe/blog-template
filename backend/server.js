@@ -3,19 +3,22 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const path = require("path");
 
-const customErrorHandler = require("./middlewares/error/customErrorHandler");
+const IndexRoute = require("./routers/index");
 const connectDatabase = require("./utils/database/connectDatabase");
+const customErrorHandler = require("./middlewares/error/customErrorHandler");
 
 dotenv.config({
-  path: "./config/config.env",
+  path: "./Config/config.env",
 });
+
 connectDatabase();
+
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-//Here should be routes
+app.use("/", IndexRoute);
 
 app.use(customErrorHandler);
 
@@ -29,7 +32,6 @@ const server = app.listen(PORT, () => {
 
 process.on("unhandledRejection", (err, promise) => {
   console.log(`Logged Error : ${err}`);
-  server.close(() => {
-    process.exit(1);
-  });
+
+  server.close(() => process.exit(1));
 });
