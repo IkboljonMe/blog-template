@@ -26,4 +26,4 @@ const getAccesToRoute = asyncErrorWrapper(async (req, res, next) => {
   next();
 });
 
-module.exports = { getAccessToRoute };
+module.exports = getAccesToRoute;
