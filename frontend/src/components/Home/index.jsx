@@ -7,10 +7,12 @@ import MainSection from "./MainSection";
 
 const Home = () => {
   return (
-    <div className={classes.wrapper}>
-      <Navbar />
-      <MainSection />
-      <Footer />
+    <div>
+      <div className={classes.wrapper}>
+        <Navbar />
+        <MainSection />
+        <Footer />
+      </div>
     </div>
   );
 };
