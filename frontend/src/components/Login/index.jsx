@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import classes from "./login.module.scss";
+import { Link } from "react-router-dom";
 const Form = () => {
   const [email, setEmail] = useState("");
-  const [password, setpassword] = useState("");
+  const [password, setPassword] = useState("");
   const [emailDirty, setEmailDirty] = useState(false);
   const [passwordDirty, setPasswordDirty] = useState(false);
   const [emailError, setEmailError] = useState("Please fill in the space");
@@ -13,7 +14,6 @@ const Form = () => {
   const [loginError, setLoginError] = useState(
     "Iltimos malumotlaringizni kiriting!!!"
   );
-  
 
   useEffect(() => {
     if (emailError || passwordError) {
@@ -36,7 +36,7 @@ const Form = () => {
   };
 
   const passwordHandler = (e) => {
-    setpassword(e.target.value);
+    setPassword(e.target.value);
     const passwordRegex =
       /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
     if (!passwordRegex.test(String(password).toLowerCase())) {
@@ -57,26 +57,18 @@ const Form = () => {
     }
   };
 
-  // OpenModal
-  const [openModal, setOpenModal] = useState(false);
-
   return (
     <div className={classes.form}>
       <div className={classes.main}>
         <div className={classes.loginBox}>
           <p>
-            Don't have an account?{" "}
-            <a href="#">
-              Sign up!
-            </a>
+            Don't have an account? <Link to="/auth/register">Sign up!</Link>
           </p>
           {email && password && (
             <div style={{ color: "red" }}>{loginError}</div>
           )}
-
           <h1>Login to your account</h1>
           <p>Piease Login Your account,Thank you</p>
-
           <form className={classes.formInput}>
             {emailDirty && emailError && (
               <div style={{ color: "red" }}>{emailError}</div>
@@ -112,16 +104,19 @@ const Form = () => {
               )}
             </div>
             <div className={classes.forgotPassword}>
-              <button onClick={() => setOpenModal(true)}>
-                Forgot Password?
-              </button>
+              <Link to="/register">
+                <button>Forgot Password?</button>
+              </Link>
             </div>
-            <button disabled={!formValid} type="submit" className={classes.loginBtn}>
+            <button
+              disabled={!formValid}
+              type="submit"
+              className={classes.loginBtn}
+            >
               Login
             </button>
           </form>
         </div>
-
         <div className={classes.emptyPlace}></div>
       </div>
     </div>
