@@ -66,7 +66,7 @@ const Form = () => {
         <div className={classes.loginBox}>
           <p>
             Don't have an account?{" "}
-            <a href="#" className="a2">
+            <a href="#">
               Sign up!
             </a>
           </p>

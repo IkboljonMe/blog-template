@@ -11,10 +11,12 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-   
+    align-items: center;   
 
     // display: none;
+    @media (max-width: bp.$lg) {
+       height: auto;
+      }
 
 }
 
@@ -35,23 +37,39 @@
 .loginBox {
     width: 45%;
     padding: 20px 40px;
-
+    p{
+        a{
+            color: blue;
+        }
+    }
     p:nth-child(3) {
         color: rgba(46, 44, 44, 0.8);
     }
 
     h1 {
+        font-weight: 600;
         padding-top: 50px;
         padding-bottom: 30px;
     }
-
+    @media (max-width: bp.$lg) {
+        width: 100%;
+        h1{
+            width: 70%;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+      }
 }
-
-
 .emptyPlace {
+
     width: 50%;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
     height: 100%;
     background-color: blue;
+    @media (max-width: bp.$md) {
+        display: none;
+      }
 }
 
 .formInput {
