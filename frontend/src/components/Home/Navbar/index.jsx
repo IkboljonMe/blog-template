@@ -4,7 +4,7 @@ import classes from "./styles.module.scss";
 import { motion } from "framer-motion";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-const navbarLinks = ["Home", "Blog", "Portfolio", "Projects"];
+const navbarLinks = ["Home", "Blog", "Portfolio", "Projects", "Login"];
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -19,7 +19,10 @@ const Navbar = () => {
         <ul>
           {navbarLinks.map((link, index) => (
             <motion.li whileHover={{ scale: 1.05 }}>
-              <Link key={index} to={"/" + link.toLowerCase()}>
+              <Link
+                key={index}
+                to={link !== "Login" ? "/" + link.toLowerCase() : "/auth/login"}
+              >
                 {link}
               </Link>
             </motion.li>
