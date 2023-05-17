@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import classes from "./login.module.scss";
+import React, { useState } from "react";
+import classes from "./styles.module.scss";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import axios from "axios";
+
 const Form = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -11,11 +13,9 @@ const Form = () => {
 
   const loginHandler = async (e) => {
     e.preventDefault();
-
     try {
       const { data } = await axios.post("/auth/login", { email, password });
       localStorage.setItem("authToken", data.token);
-
       setTimeout(() => {
         navigate("/");
       }, 1800);
@@ -66,9 +66,13 @@ const Form = () => {
                 <button>Forgot Password?</button>
               </Link>
             </div>
-            <button type="submit" className={classes.loginBtn}>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              type="submit"
+              className={classes.loginBtn}
+            >
               Login
-            </button>
+            </motion.button>
           </form>
         </div>
         <div className={classes.emptyPlace}></div>
