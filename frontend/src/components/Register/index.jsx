@@ -3,11 +3,13 @@ import { useNavigate } from "react-router-dom";
 import classes from "./styles.module.scss";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import TextField from "./TextField";
 
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const [confirmpassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -42,7 +44,6 @@ const Register = () => {
       }, 6000);
     }
   };
-  console.log(error);
 
   return (
     <div className={classes.wrapper}>
@@ -52,50 +53,30 @@ const Register = () => {
           <h1>Register here</h1>
           <h3>Please enter your credentias to register</h3>
           <form onSubmit={registerHandler} className={classes.formInput}>
-            <div>
-              <input
-                onChange={(e) => setUsername(e.target.value)}
-                required=""
-                value={username}
-                name="username"
-                type="text"
-                placeholder="john@ gmail.com"
-              />
-              <label>Username</label>
-            </div>
-            <div>
-              <input
-                onChange={(e) => setEmail(e.target.value)}
-                required=""
-                value={email}
-                name="email"
-                type="email"
-                placeholder="john@ gmail.com"
-              />
-              <label>Email</label>
-            </div>
-            <div>
-              <input
-                onChange={(e) => setPassword(e.target.value)}
-                required=""
-                value={password}
-                name="password"
-                type="password"
-                placeholder="6-strong character"
-              />
-              <label>Password</label>
-            </div>
-            <div>
-              <input
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                required=""
-                value={confirmpassword}
-                name="password"
-                type="password"
-                placeholder="6-strong character"
-              />
-              <label>Confirm Password</label>
-            </div>
+            <TextField
+              type="text"
+              placeholder="Username"
+              label="Username"
+              onChange={setUsername}
+            />
+            <TextField
+              type="email"
+              placeholder="Email"
+              label="Email"
+              onChange={setEmail}
+            />
+            <TextField
+              type="password"
+              placeholder="Password"
+              label="Password"
+              onChange={setPassword}
+            />
+            <TextField
+              type="password"
+              placeholder="Confirm Password"
+              label="Confirm Password"
+              onChange={setConfirmPassword}
+            />
             <Link to="/resetpassword">Forgot Password?</Link>
             <button type="submit">Submit</button>
           </form>
