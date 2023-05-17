@@ -26,6 +26,7 @@ const Form = () => {
       }, 4500);
     }
   };
+  
   console.log(error);
   return (
     <div className={classes.form}>
@@ -38,7 +39,7 @@ const Form = () => {
           <h1>Login to your account</h1>
           <p>Piease Login Your account,Thank you</p>
           <form onSubmit={loginHandler} className={classes.formInput}>
-            )}
+            
             <div>
               <input
                 onChange={(e) => setEmail(e.target.value)}
