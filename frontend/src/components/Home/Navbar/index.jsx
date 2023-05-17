@@ -33,7 +33,7 @@ const Navbar = () => {
         </Link>
         <ul>
           {navbarLinks.map((link, index) => (
-            <motion.li key={index} whileHover={{ scale: 1.05 }}>
+            <motion.li key={index + 1} whileHover={{ scale: 1.05 }}>
               <Link
                 to={link !== "Login" ? "/" + link.toLowerCase() : "/auth/login"}
               >
@@ -48,7 +48,7 @@ const Navbar = () => {
           </motion.li>
         </ul>
         <menu>
-          {menu ? (
+          {!menu ? (
             <i
               onClick={() => {
                 setMenu(!menu);
@@ -67,14 +67,19 @@ const Navbar = () => {
             </i>
           )}
         </menu>
-        {!menu && (
+        {menu && (
           <section className={classes.menuSection}>
             <div></div>
             {navbarLinks.map((link, index) => (
-              <p>
+              <p key={index}>
                 <Link to={"/" + link.toLowerCase()}>{link}</Link>
               </p>
             ))}
+            <motion.p whileHover={{ scale: 1.05 }}>
+              <Link onClick={auth && handleLogout} to={!auth && "/auth/login"}>
+                {auth ? "Log out" : "Login"}
+              </Link>
+            </motion.p>
           </section>
         )}
       </nav>
