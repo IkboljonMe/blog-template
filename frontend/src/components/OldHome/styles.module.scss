@@ -1,0 +1,104 @@
+@use "../../styles/breakpoints" as bp;
+@use "../../styles/colors" as colors;
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  align-content: space-between;
+  z-index: 0;
+}
+.imageContainer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 180px;
+  gap: 40px;
+  @media (max-width: bp.$sm) {
+    flex-direction: column;
+    padding-top: 160px;
+    gap: 0px;
+  }
+  img {
+    max-width: 140px;
+    max-height: 140px;
+    border-radius: 999px;
+    @media (max-width: bp.$lg) {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+  .imgRotation {
+    animation: rotation 40s infinite linear;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 40px;
+      font-weight: 700;
+      color: colors.$black200;
+      @media (max-width: bp.$lg) {
+        font-size: 25px;
+      }
+    }
+    p {
+      font-size: 30px;
+      color: colors.$black-grey;
+      @media (max-width: bp.$lg) {
+        font-size: 20px;
+      }
+    }
+    div {
+      display: flex;
+      flex-direction: row;
+      padding-top: 10px;
+      width: 100%;
+      gap: 10px;
+      a {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+}
+.buttonsContainer {
+  p {
+    font-size: 20px;
+    color: colors.$black-grey;
+    padding-top: 20px;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 20px;
+    button {
+      border: none;
+      width: 140px;
+      height: 42.5px;
+      border: solid 1px#1e90ff;
+      border-radius: 3px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .blog {
+      background: #1e90ff;
+      color: white;
+    }
+    .portfolio {
+      background: white;
+      color: #1e90ff;
+    }
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
