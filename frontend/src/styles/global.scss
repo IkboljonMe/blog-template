@@ -10,10 +10,6 @@
 }
 body {
   font-family: "source-sans-pro", sans-serif;
-  padding: 0px 200px;
-  @media (max-width: bp.$lg) {
-    padding: 0px 50px;
-  }
 }
 a {
   color: inherit;

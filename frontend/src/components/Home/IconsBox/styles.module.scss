@@ -1,0 +1,33 @@
+.iconContainer {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 8px 14px 8px 14px;
+  z-index: 10;
+}
+
+.iconSize {
+  font-size: 60px;
+}
+
+.nextIcon {
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.tsIcon {
+  font-size: 60px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #2d79c7;
+}
+
+@media screen and (max-width: 480px) {
+  .iconContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}

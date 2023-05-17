@@ -1,17 +1,32 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-
 import classes from "./styles.module.scss";
-import MainSection from "./MainSection";
+import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
+import IconsBox from "./IconsBox";
 
 const Home = () => {
   return (
-    <div>
-      <div className={classes.wrapper}>
-        <Navbar />
-        <MainSection />
-        <Footer />
+    <div className={classes.wrapper}>
+      <div>
+        <motion.h1>Ikboljon Abdurasulov</motion.h1>
+        <motion.h2>
+          I&apos;m a
+          <span>
+            <Typewriter
+              words={[
+                "Full-stack Web developer.",
+                "Software Engineer.",
+                "Freelancer.",
+              ]}
+              loop={{}}
+              cursor
+              cursorStyle="|"
+              typeSpeed={90}
+              deleteSpeed={20}
+            />
+          </span>
+        </motion.h2>
+        <IconsBox />
       </div>
     </div>
   );
