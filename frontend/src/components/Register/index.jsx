@@ -1,35 +1,49 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import classes from "./styles.module.scss";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Register = () => {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isFormValid, setIsFormValid] = useState(false);
-  const [isEmailValid, setIsEmailValid] = useState(false);
-  const [isPasswordValid, setIsPasswordValid] = useState(false);
-  useEffect(() => {
-    if (isEmailValid && isPasswordValid) {
-      setIsFormValid(true);
-    }
-  }, [isEmailValid, isPasswordValid]);
-  const emailHandler = (event) => {
-    setEmail(event.target.value);
-    const emailRegex =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const [confirmpassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const registerHandler = async (e) => {
+    e.preventDefault();
 
-    if (emailRegex.test(String(email).toLowerCase())) {
-      setIsEmailValid(true);
+    if (password !== confirmpassword) {
+      setPassword("");
+      setConfirmPassword("");
+      setTimeout(() => {
+        setError("");
+      }, 8000);
+      return setError("Passwords do not match");
+    }
+
+    try {
+      const { data } = await axios.post("/auth/register", {
+        username,
+        email,
+        password,
+      });
+      localStorage.setItem("authToken", data.token);
+
+      setTimeout(() => {
+        navigate("/");
+      }, 1800);
+    } catch (error) {
+      setError(error.response.data.error);
+
+      setTimeout(() => {
+        setError("");
+      }, 6000);
     }
   };
-  const passwordHandler = (event) => {
-    setPassword(event.target.value);
-    const passwordRegex =
-      /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-    if (passwordRegex.test(String(password).toLowerCase())) {
-      setIsPasswordValid(true);
-    }
-  };
+  console.log(error);
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
@@ -37,21 +51,32 @@ const Register = () => {
         <div className={classes.loginBox}>
           <h1>Register here</h1>
           <h3>Please enter your credentias to register</h3>
-          <div className={classes.formInput}>
+          <form onSubmit={registerHandler} className={classes.formInput}>
             <div>
               <input
-                onChange={(e) => emailHandler(e)}
+                onChange={(e) => setUsername(e.target.value)}
+                required=""
+                value={username}
+                name="username"
+                type="text"
+                placeholder="john@ gmail.com"
+              />
+              <label>Username</label>
+            </div>
+            <div>
+              <input
+                onChange={(e) => setEmail(e.target.value)}
                 required=""
                 value={email}
                 name="email"
-                type="text"
+                type="email"
                 placeholder="john@ gmail.com"
               />
               <label>Email</label>
             </div>
             <div>
               <input
-                onChange={(e) => passwordHandler(e)}
+                onChange={(e) => setPassword(e.target.value)}
                 required=""
                 value={password}
                 name="password"
@@ -60,28 +85,23 @@ const Register = () => {
               />
               <label>Password</label>
             </div>
+            <div>
+              <input
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                required=""
+                value={confirmpassword}
+                name="password"
+                type="password"
+                placeholder="6-strong character"
+              />
+              <label>Confirm Password</label>
+            </div>
             <Link to="/resetpassword">Forgot Password?</Link>
-            <button disabled={!isFormValid} type="submit">
-              Login
-            </button>
-          </div>
+            <button type="submit">Submit</button>
+          </form>
           <p>
             Do you have account? <Link to="/auth/login">Sign up!</Link>
           </p>
-          {/* <error>
-            {!isFormValid &&
-              `Check ${!isEmailValid ? "email" : ""}${
-                !isPasswordValid
-                  ? `${
-                      !isEmailValid && !isPasswordValid ? "\u00A0and\u00A0" : ""
-                    }password`
-                  : ""
-              }${
-                !isEmailValid && !isPasswordValid
-                  ? "\u00A0fields"
-                  : "\u00A0field"
-              }`}
-          </error> */}
         </div>
       </div>
     </div>
