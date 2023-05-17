@@ -1,0 +1,109 @@
+@use "../../styles/breakpoints" as bp;
+@use "../../styles/colors" as colors;
+
+.wrapper {
+  position: fixed;
+  top: 0%;
+  left: 0;
+  background-color: rgba(243, 239, 233, 0.5);
+  z-index: 1050;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: bp.$lg) {
+    height: auto;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 95%;
+    height: 90%;
+    background-color: #fff;
+    display: flex;
+    -webkit-box-shadow: -1px -1px 31px -3px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: -1px -1px 31px -3px rgba(34, 60, 80, 0.2);
+    box-shadow: -1px -1px 31px -3px rgba(34, 60, 80, 0.2);
+    .emptyBox {
+      width: 50%;
+      border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px;
+      height: 100%;
+      background-color: blue;
+      @media (max-width: bp.$md) {
+        display: none;
+      }
+    }
+    .loginBox {
+      width: 45%;
+      padding: 20px 40px;
+      p {
+        a {
+          color: blue;
+        }
+      }
+
+      h1 {
+        font-weight: 600;
+        padding-top: 50px;
+        padding-bottom: 30px;
+      }
+      @media (max-width: bp.$lg) {
+        width: 100%;
+        h1 {
+          width: 70%;
+          padding-top: 30px;
+          padding-bottom: 20px;
+        }
+      }
+      .formInput {
+        div {
+          margin-top: 30px;
+          position: relative;
+          input {
+            font-size: 15px;
+            border: 0;
+            border: 1px solid indigo;
+            border-radius: 5px;
+            width: 100%;
+            padding: 15px 20px;
+          }
+          label {
+            padding: 0 5px;
+            color: black;
+            position: absolute;
+            top: -15px;
+            background-color: #fff;
+            left: 14px;
+
+            &:hover {
+              font-size: 14px;
+            }
+          }
+        }
+
+        a {
+          text-align: end;
+          width: 100%;
+
+          button {
+            border: 0;
+            color: rgb(70, 70, 231);
+            background-color: transparent;
+          }
+        }
+        button {
+          width: 100%;
+          background-color: blue;
+          padding: 8px 0;
+          font-weight: 600;
+          border-radius: 7px;
+          margin-top: 15px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
