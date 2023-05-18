@@ -1,0 +1,114 @@
+@use "../../../styles/breakpoints"as bp;
+@use "../../../styles/colors"as colors;
+@use "../../../styles/global.scss"as global;
+
+body {
+    max-width: 100%;
+}
+
+.wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100vh;
+    padding: 35px 25px 20px 10px;
+    background-color: colors.$black_bg;
+    border-right: 2px solid #fff;
+
+    @media (max-width: bp.$lg) {
+        display: none;
+
+    }
+
+    div {
+        img {
+            width: 120px;
+            border-radius: 50%;
+            border: 6px solid #914DFEFF;
+        }
+    }
+
+    .link h2 {
+        font-size: 22px;
+    }
+
+    .social_icons {
+        display: flex;
+        margin-top: 20px;
+
+        li {
+            background-color: colors.$black_link_bg;
+            border-radius: 50%;
+            color: colors.$white;
+            padding: 10px;
+            margin: 0 5px;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+            }
+        }
+    }
+
+    .ul_links {
+        margin-top: 20px;
+        padding-left: 15%;
+        padding-top: 20px;
+        color: #eee;
+        li{
+            margin-bottom: 17px;
+            
+        }
+        li a{
+            &:hover{
+            }
+        }
+
+        li a :nth-child(1) {
+            .iconss{
+                margin-right: 7px;
+                
+
+            }
+            &::before {
+                margin-left: auto;
+            }
+
+            &::after{
+                content: '';
+                width: 0%;
+                height: 2px;
+                background: #914DFEFF;
+                display: block;
+                transition: 0.5s;
+            }
+            &:hover{
+                color: #fff;
+                .iconss{
+                    color: #914DFEFF;
+                }
+                &::after, &::before {
+                    width: 100%;
+                }
+            }
+        }
+
+        li a {
+
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+
+            span {
+                margin: 0 9px;
+
+                
+            }
+        }
+    }
+    
+}
