@@ -9,8 +9,8 @@ import { FaBars } from "react-icons/fa";
 const Home = () => {
   return (
     <div className={classes.wrapper}>
-      <FaBars className={classes.faBars}/>
-      <Sidebar/>
+      <FaBars className={classes.faBars} />
+      <Sidebar />
       <div className={classes.homePage}>
         <motion.h1>Ikboljon Abdurasulov</motion.h1>
         <motion.h2 className={classes.animations}>
