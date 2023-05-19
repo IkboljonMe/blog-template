@@ -9,9 +9,13 @@
   margin: 0 0;
 }
 body {
+  max-width: 100%;
   font-family: "source-sans-pro", sans-serif;
 }
 a {
   color: inherit;
   text-decoration: inherit;
+}
+ul{
+  list-style: none;
 }

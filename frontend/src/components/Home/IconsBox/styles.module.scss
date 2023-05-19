@@ -1,5 +1,5 @@
 .iconContainer {
-  display: flex;
+  width: 100%;
   gap: 30px;
   margin-top: 20px;
   border-radius: 10px;
@@ -7,9 +7,20 @@
   z-index: 10;
 }
 
+.iconContainers {
+  width: 40%;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+
 .iconSize {
+
   font-size: 60px;
 }
+
 
 .nextIcon {
   background-color: #fff;
@@ -29,5 +40,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+  }
+  .iconSize, .tsIcon{
+    // font-size: 30px;
   }
 }

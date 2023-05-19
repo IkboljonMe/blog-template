@@ -1,25 +1,96 @@
 @use "../../styles/breakpoints" as bp;
 @use "../../styles/colors" as colors;
+
 .wrapper {
   display: flex;
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+  -moz-filter: brightness(90%);
+  justify-content: center;
   background-image: url(../../assets/bg.png);
   height: 100vh;
   width: 100%;
   background-size: cover;
   background-position: center;
   padding-left: 300px;
-  justify-content: center;
   align-items: center;
   text-align: center;
+  @media (max-width: bp.$lg) {
+    width: 100%;
+    padding-left: 0;
+  }
+
   h1 {
     color: colors.$white;
     font-size: 48px;
   }
+
   h2 {
+    // width: 100%;
     color: white;
     font-size: 35px;
+
     span {
-      color: colors.$typewriter;
+      color: rgb(179, 137, 247);
+    }
+  }
+
+  .homePage {
+    width: 100%;
+
+    // Contact me button
+    button {
+      margin-top: 50px;
+      padding: 0.1em 0.25em;
+      width: 13em;
+      height: 4.2em;
+      background-color: #0d4a90;
+      border: 0.08em solid rgb(72, 52, 159);
+      border-radius: 0.3em;
+      font-size: 12px;
+    }
+
+    button span {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 0.4em;
+      width: 8.25em;
+      height: 2.5em;
+      background-color: #21d4fd;
+      background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+
+      border-radius: 0.2em;
+      font-size: 1.5em;
+      color: black;
+      border: 0.08em solid colors.$white;
+      box-shadow: 0 0.4em 0.1em 0.019em colors.$white;
+    }
+
+    button span:hover {
+      transition: all 0.5s;
+      transform: translate(0, 0.4em);
+      box-shadow: 0 0 0 0 colors.$white;
+    }
+
+    button span:not(hover) {
+      transition: all 1s;
+    }
+  }
+  //////////////////////////
+
+  .animations {
+    width: 100%;
+  }
+  .faBars {
+    color: #fff;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: none;
+    @media (max-width: bp.$lg) {
+      display: block;
     }
   }
 }
