@@ -1,11 +1,9 @@
-import { motion } from "framer-motion";
-import { ComputersCanvas } from "../canvas";
-import { ErrorBoundary } from "react-error-boundary";
 import classes from "./styles.module.scss";
 import { socialLinks } from "../../constants";
 import { Link } from "react-router-dom";
 import { SocialLink } from "../../constants/index.types";
 import { BsGithub, BsLinkedin, BsTelegram, BsYoutube } from "react-icons/bs";
+import { motion } from "framer-motion";
 const getIcon = (name: string) => {
   if (name == "Telegram") {
     return <BsTelegram />;
@@ -43,23 +41,6 @@ const Hero = () => {
             </Link>
           ))}
         </div>
-      </div>
-      <div className={classes.computer}>
-        <ComputersCanvas />
-      </div>
-      <div className={classes.bottomBtnContainer}>
-        <a href="#about" className={classes.btnDown}>
-          <motion.div
-            animate={{
-              y: [0, 24, 0],
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-          />
-        </a>
       </div>
     </section>
   );

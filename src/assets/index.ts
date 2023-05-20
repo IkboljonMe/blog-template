@@ -16,6 +16,10 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 
+import guess from "./projects/guess-number.png";
+import portfolio from "./projects/portfolio.png";
+import eCommerce from "./projects/uz-shop.png";
+
 export {
   logo,
   github,
@@ -33,4 +37,7 @@ export {
   redux,
   tailwind,
   typescript,
+  guess,
+  portfolio,
+  eCommerce,
 };

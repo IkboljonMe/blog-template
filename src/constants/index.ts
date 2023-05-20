@@ -8,10 +8,10 @@ import socialLinks from "./socialLinks";
 
 export {
   skills,
+  navLinks,
+  socialLinks,
   technologies,
   experiences,
   testimonials,
   projects,
-  navLinks,
-  socialLinks,
 };

@@ -1,8 +1,7 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-import { EarthCanvas } from "../canvas";
 import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
 import classes from "./styles.module.scss";
@@ -123,9 +122,7 @@ const Contact = () => {
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className={classes.earthCanvasContainer}
-      >
-        <EarthCanvas />
-      </motion.div>
+      ></motion.div>
     </div>
   );
 };
