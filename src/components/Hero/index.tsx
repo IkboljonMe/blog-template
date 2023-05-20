@@ -42,21 +42,6 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <div className={classes.computer}></div>
-      <div className={classes.bottomBtnContainer}>
-        <a href="#about" className={classes.btnDown}>
-          <motion.div
-            animate={{
-              y: [0, 24, 0],
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-          />
-        </a>
-      </div>
     </section>
   );
 };
