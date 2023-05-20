@@ -1,0 +1,98 @@
+@use "../../styles/global" as gloabal;
+@use "../../styles/breakpoints" as bp;
+@use "../../styles/colors" as colors;
+
+.feedBackCard {
+  background: colors.$black-200;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  width: 320px;
+  min-height: 400px;
+  position: relative;
+  @media (min-width: bp.$xs) {
+    width: 320px;
+  }
+  p {
+    color: colors.$white;
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  .description {
+    margin-top: 4px;
+
+    p {
+      color: colors.$white;
+      letter-spacing: 0.05rem;
+      font-size: 18px;
+    }
+    div {
+      margin-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4px;
+      div {
+        display: flex;
+        flex-direction: column;
+        div {
+          display: flex;
+          flex-direction: row;
+          span {
+            display: flex;
+            width: 100%;
+            @include gloabal.blue_text_gradient;
+          }
+          p {
+            display: flex;
+            color: colors.$white;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-direction: row;
+          }
+        }
+        p {
+          display: flex;
+          margin-top: 4px;
+          font-weight: normal;
+          color: colors.$secondary;
+          font-size: 12px;
+        }
+      }
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 9999px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.feedBackWrapper {
+  background: colors.$tertiary;
+  border-radius: 20px;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  .titleContainer {
+    background: colors.$tertiary;
+    border-radius: 1rem;
+    min-height: 300px;
+    @include gloabal.padding;
+    p {
+      @include gloabal.sectionSubText;
+      text-align: center;
+    }
+    h2 {
+      @include gloabal.sectionHeadText;
+      text-align: center;
+    }
+  }
+  .feedBacksContainer {
+    margin-top: -5rem;
+    padding-bottom: 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 28px;
+    @include gloabal.paddingX;
+  }
+}

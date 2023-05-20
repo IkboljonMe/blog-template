@@ -1,0 +1,134 @@
+@use "../../styles/breakpoints" as bp;
+@use "../../styles/colors" as colors;
+@use "../../styles/global" as global;
+.wrapper {
+  .sectionSubText {
+    @include global.sectionSubText;
+    text-align: center;
+  }
+  .sectionHeadText {
+    @include global.sectionHeadText;
+    text-align: center;
+  }
+  .topWorksSection {
+    width: 100%;
+    display: flex;
+    p {
+      margin-top: 12px;
+      color: colors.$secondary;
+      font-size: 17px;
+      max-width: bp.$md;
+      line-height: 30px;
+    }
+  }
+  .projectsSection {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    @media (max-width: bp.$sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.cardTilt {
+  background: colors.$tertiary;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  width: 100%;
+  @media (max-width: bp.$sm) {
+    width: 360px;
+  }
+  .imageContainer {
+    position: relative;
+    height: 230px;
+    img {
+      object-fit: cover;
+      border-radius: 1rem;
+      width: 100%;
+      height: 230px;
+    }
+    .githubIconBtn {
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      display: flex;
+      justify-content: end;
+      margin-top: 12px;
+      div {
+        @include global.black_gradient;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 9999px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        img {
+          width: 50%;
+          height: 50%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .descriptionContainer {
+    margin-top: 1.25rem;
+    h3 {
+      color: colors.$white;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    p {
+      margin-top: 0.5rem;
+      color: colors.$secondary;
+      font-style: 14px;
+    }
+  }
+  .tagsContainer {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    .tag {
+      color: inherit;
+      font-size: 14px;
+    }
+  }
+}
+
+.sectionSubText {
+  @include global.sectionSubText;
+}
+.sectionHeadText {
+  @include global.sectionHeadText;
+}
+
+.black-gradient {
+  @include global.black_gradient;
+}
+.violet-gradient {
+  @include global.violet_gradient;
+}
+.black-gradient {
+  @include global.black_gradient;
+}
+.green-pink-gradient {
+  @include global.green_pink_gradient;
+}
+.orange-text-gradient {
+  @include global.orange_text_gradient;
+}
+.green-text-gradient {
+  @include global.green_text_gradient;
+}
+.blue-text-gradient {
+  @include global.blue_text_gradient;
+}
+.pink-text-gradient {
+  @include global.pink_text-gradient;
+}

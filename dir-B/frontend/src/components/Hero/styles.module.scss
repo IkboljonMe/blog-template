@@ -1,0 +1,104 @@
+@use "../../styles/colors" as colors;
+@use "../../styles/global" as global;
+@use "../../styles/breakpoints" as bp;
+
+.heroSectionWrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  .lgHeroTopContainer {
+    @include global.paddingX;
+    position: absolute;
+    top: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    justify-content: center;
+
+    @media (max-width: bp.$xs) {
+      margin-left: 1rem;
+    }
+    @media (max-width: bp.$md) {
+      margin-left: 2 rem;
+    }
+    p {
+      @include global.sectionSubText;
+    }
+    h1 {
+      @include global.sectionHeadText;
+      color: colors.$white;
+      font-size: 40px;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    h2 {
+      color: colors.$white-200;
+    }
+    div {
+      gap: 1rem;
+      display: flex;
+      flex-direction: row;
+      i {
+        cursor: pointer;
+        z-index: 1;
+      }
+    }
+
+    .heroHeadText {
+      @include global.heroHeadText;
+      color: colors.$white;
+      .heroName {
+        color: colors.$hero_name;
+      }
+    }
+    .heroSubText {
+      @include global.heroSubText;
+      // margin-top: 0.2rem;
+      color: colors.$white-100;
+    }
+  }
+  // .computer {
+  //   z-index: 0;
+  // }
+  .bottomBtnContainer {
+    position: absolute;
+    bottom: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: bp.$xs) {
+      bottom: 2rem;
+    }
+    .btnDown {
+      width: 35px;
+      height: 64px;
+      border: 4px solid colors.$secondary;
+      border-radius: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: bp.$sm) {
+        border: 2.5px solid colors.$secondary;
+        border-radius: 1.5rem;
+        width: 20px;
+        height: 50px;
+      }
+      div {
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 9999px;
+        margin-bottom: 2rem;
+        background: colors.$secondary;
+        @media (max-width: bp.$sm) {
+          width: 0.5rem;
+          height: 0.5rem;
+        }
+      }
+    }
+  }
+}
