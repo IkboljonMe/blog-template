@@ -1,6 +1,5 @@
 import {
   NavLink,
-  Service,
   Technology,
   Experience,
   Testimonial,
@@ -8,10 +7,6 @@ import {
   Skill,
 } from "./index.types";
 import {
-  mobile,
-  backend,
-  creator,
-  web,
   javascript,
   typescript,
   html,
@@ -31,7 +26,6 @@ import {
   guess,
   portfolio,
   eCommerce,
-  threejs,
 } from "../assets";
 import node from "../assets/skills/nodejs.svg";
 import expressjs from "../assets/skills/expressjs.svg";
@@ -151,10 +145,6 @@ const technologies: Technology[] = [
   {
     name: "MongoDB",
     icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
   },
   {
     name: "git",
