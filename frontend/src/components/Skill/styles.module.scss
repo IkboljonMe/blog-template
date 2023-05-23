@@ -1,0 +1,74 @@
+@use "../../styles/global" as global;
+@use "../../styles/colors" as colors;
+@use "../../styles/breakpoints" as bp;
+.sectionSubText {
+  @include global.sectionSubText;
+  text-align: center;
+}
+.sectionHeadText {
+  text-align: center;
+  @include global.sectionHeadText;
+}
+.cardWrapper {
+  width: 100%;
+  @include global.green_pink_gradient;
+  padding: 1px;
+  border-radius: 20px;
+  .card {
+    background: colors.$tertiary;
+    border-radius: 20px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    min-height: 280px;
+    display: flex;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    flex-direction: column;
+    .skill {
+      display: flex;
+      margin-top: 1.5rem;
+      justify-content: space-between;
+      flex-direction: row;
+      h3 {
+        margin-bottom: 1rem;
+      }
+      .skillName {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        img {
+          width: 10px;
+        }
+        .toLink {
+          display: flex;
+        }
+      }
+      .projects {
+        display: flex;
+        div {
+          padding-right: 6px;
+          padding-right: 6px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  h3 {
+    color: colors.$white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+.servicesContainer {
+  display: flex;
+  margin-top: 5rem;
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  @media (max-width: bp.$sm) {
+    grid-template-columns: 1fr 1fr;
+    display: none;
+  }
+}

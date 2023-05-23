@@ -1,5 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Experience, Hero, Navbar, Works } from "./components";
+import {
+  About,
+  Contact,
+  Experience,
+  Hero,
+  Navbar,
+  Works,
+  Skill,
+} from "./components";
 import classes from "./styles.module.scss";
 function App() {
   return (
@@ -10,6 +18,7 @@ function App() {
           <Hero />
         </div>
         <About />
+        <Skill />
         <Experience />
         <Works />
         <div className={classes.contactSection}>
