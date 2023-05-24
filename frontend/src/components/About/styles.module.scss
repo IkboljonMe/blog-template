@@ -37,7 +37,12 @@
         align-items: center;
         gap: 4px;
         img {
-          width: 10px;
+          width: 30px;
+          border-radius: 50%;
+          &:hover{
+            transform: translateX(5px);
+            transition: all .3s;
+          }
         }
         .toLink {
           display: flex;
@@ -74,7 +79,7 @@
   margin-top: 5rem;
   display: grid;
   gap: 2.5rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   @media (max-width: bp.$sm) {
     grid-template-columns: 1fr 1fr;
     display: none;

@@ -1,4 +1,4 @@
-import { Tilt } from "react-tilt";
+
 import { motion } from "framer-motion";
 import classes from "./styles.module.scss";
 import { fadeIn } from "../../utils/motion";
@@ -14,14 +14,9 @@ const SkillCard: React.FC<SkillCardProps> = ({ development, index }) => {
   console.log(index);
   console.log(data);
   return (
-    <Tilt
-      options={{
-        max: 45,
-        scale: 1,
-        speed: 450,
-      }}
-    >
-      <motion.div
+      
+      <div className={classes.skills}>
+        <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
         className={classes.cardWrapper}
       >
@@ -47,7 +42,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ development, index }) => {
           ))}
         </div>
       </motion.div>
-    </Tilt>
+      </div>
   );
 };
 

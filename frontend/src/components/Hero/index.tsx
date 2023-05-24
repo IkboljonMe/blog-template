@@ -8,6 +8,7 @@ const getIcon = (name: string) => {
   if (name == "Telegram") {
     return <BsTelegram />;
   }
+  
   if (name == "Github") {
     return <BsGithub />;
   }
