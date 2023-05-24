@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import classes from "./styles.module.scss";
 import { fadeIn } from "../../utils/motion";
@@ -11,12 +10,9 @@ interface SkillCardProps {
 }
 const SkillCard: React.FC<SkillCardProps> = ({ development, index }) => {
   const { name, data } = development;
-  console.log(index);
-  console.log(data);
   return (
-      
-      <div className={classes.skills}>
-        <motion.div
+    <div className={classes.skills}>
+      <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
         className={classes.cardWrapper}
       >
@@ -42,7 +38,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ development, index }) => {
           ))}
         </div>
       </motion.div>
-      </div>
+    </div>
   );
 };
 

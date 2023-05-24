@@ -15,12 +15,14 @@ body {
     width: 320px;
     margin: 0 auto 0 auto;
     perspective: 1000px;
-
+    // background-color: red;
     .carousel {
-      position: relative;
-      max-width: 50%;
+      max-width: 160px; /* Adjust this value based on your desired width */
       height: 100%;
+      position: relative;
       transform-style: preserve-3d;
+      background-color: #fefefe;
+      z-index: 9999;
       animation: rotate360 12s infinite forwards linear;
 
       .image {
@@ -28,7 +30,7 @@ body {
         width: 150px;
         height: 150px;
         left: 50%;
-        right: 50px;
+        transform: translateX(-50%);
         display: flex;
 
         &:nth-child(1) {

@@ -1,6 +1,6 @@
-@use "../../styles/colors"as colors;
-@use "../../styles/global"as global;
-@use "../../styles/breakpoints"as bp;
+@use "../../styles/colors" as colors;
+@use "../../styles/global" as global;
+@use "../../styles/breakpoints" as bp;
 
 * {
   margin: 0;
@@ -9,7 +9,7 @@
 }
 
 .heroSectionWrapper {
-  background-image: url('../../assets/herobg.png');
+  // background-image: url("../../assets/herobg.png");
   background-size: cover;
   padding: 0 100px;
   max-width: 100%;
@@ -17,6 +17,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .background {
+    // height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
   .lgHeroTopContainer {
     padding-top: 200px;
@@ -29,14 +35,13 @@
       &:hover {
         color: coral;
         transform: translate(10px);
-        transition: all .3s;
+        transition: all 0.3s;
       }
     }
 
     @media (max-width: bp.$xs) {
       // margin-left: 1rem;
       flex-direction: column;
-
     }
 
     @media (max-width: bp.$md) {
