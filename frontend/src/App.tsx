@@ -12,6 +12,7 @@ import classes from "./styles.module.scss";
 
 import Background from "./components/Background/Index";
 function App() {
+  
   return (
     <BrowserRouter>
       <div className={classes.wrapper}>
@@ -23,10 +24,11 @@ function App() {
         <About />
         <Skill />
         <Experience />
-        <Works />
+        {/* <Works /> */}
         <div className={classes.contactSection}>
           <Contact />
         </div>
+        
       </div>
     </BrowserRouter>
   );

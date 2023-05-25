@@ -1,4 +1,8 @@
+
 @use "./breakpoints" as bp;
+
+
+
 
 @mixin hidden {
   display: none;
@@ -148,18 +152,20 @@
     #804dee 0%,
     rgba(60, 51, 80, 0) 100%
   );
+
 }
 @mixin black_gradient {
-  background: #000000; /* fallback for old browsers */
+ 
+  background: #fff; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
+    rgb(232, 223, 223),
+    #fff
+  );
   background: linear-gradient(
     to right,
-    #434343,
-    #000000
+    #0E0F31FF,
+    #0E0F31FF
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 

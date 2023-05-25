@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { SectionWrapper } from "../../hoc";
 import classes from "./styles.module.scss";
 import { fadeIn } from "../../utils/motion";
 import { Link } from "react-router-dom";
@@ -17,7 +18,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ development, index }) => {
         className={classes.cardWrapper}
       >
         <div className={classes.card}>
-          <h3>{name}</h3>
+          {/* <h3>{name}</h3> */}
           {data.map(({ name, icon, projects }) => (
             <div className={classes.skill}>
               <div className={classes.skillName}>

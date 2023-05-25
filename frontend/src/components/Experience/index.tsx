@@ -29,4 +29,4 @@ const ExperienceFc = () => {
   );
 };
 
-export default SectionWrapper(ExperienceFc, "experience");
+export default SectionWrapper(ExperienceFc, "experience", '#fff');

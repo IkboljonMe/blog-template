@@ -16,10 +16,10 @@ const Background = () => {
     },
     []
   );
+  
   return (
     <div className={classes.wrapper}>
       <Particles
-        height="500px"
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
