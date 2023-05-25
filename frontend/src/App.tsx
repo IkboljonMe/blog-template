@@ -1,5 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Experience, Hero, Navbar, Works } from "./components";
+import {
+  About,
+  Contact,
+  Experience,
+  Hero,
+  Navbar,
+  Works,
+  Skill,
+} from "./components";
 import classes from "./styles.module.scss";
 
 import Background from "./components/Background/Index";
@@ -13,6 +21,7 @@ function App() {
           {/* <Background /> */}
         </div>
         <About />
+        <Skill />
         <Experience />
         <Works />
         <div className={classes.contactSection}>

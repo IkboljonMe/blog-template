@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "../../hoc";
 import { fadeIn, textVariant } from "../../utils/motion";
 import classes from "./styles.module.scss";
-import SkillCard from "./SkillCard";
-import { skills } from "../../constants";
 
 const About = () => {
   return (
@@ -38,11 +36,6 @@ const About = () => {
       {/* {
         TODO: FIX DEVICE
       } */}
-      <div className={classes.servicesContainer}>
-        {skills.map((development, index) => (
-          <SkillCard development={development} index={index} />
-        ))}
-      </div>
     </>
   );
 };

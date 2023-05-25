@@ -9,7 +9,6 @@
   text-align: center;
   @include global.sectionHeadText;
 }
-<<<<<<< .merge_file_Pzg6Sv
 .cardWrapper {
   width: 100%;
   @include global.green_pink_gradient;
@@ -38,12 +37,7 @@
         align-items: center;
         gap: 4px;
         img {
-          width: 30px;
-          border-radius: 50%;
-          &:hover{
-            transform: translateX(5px);
-            transition: all .3s;
-          }
+          width: 10px;
         }
         .toLink {
           display: flex;
@@ -67,28 +61,14 @@
     text-align: center;
   }
 }
-=======
-
->>>>>>> .merge_file_ylqZV9
-.description {
-  width: 100%;
-  margin-top: 1rem;
-  color: colors.$secondary;
-  font-size: 1rem;
-  // max-width: bp.$md;
-  line-height: 30px;
-}
-<<<<<<< .merge_file_Pzg6Sv
 .servicesContainer {
   display: flex;
   margin-top: 5rem;
   display: grid;
   gap: 2.5rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   @media (max-width: bp.$sm) {
     grid-template-columns: 1fr 1fr;
     display: none;
   }
 }
-=======
->>>>>>> .merge_file_ylqZV9
