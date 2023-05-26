@@ -9,7 +9,6 @@ import skillFireBase from './firebase.png'
 import skillHtmlcssjs from './htmlcssjs.png'
 import skillNextjsIcon from './nextjs.png'
 import skillMaterialUI from './materialUI.png'
-import skillBootstrap from './bootstrap.jfif'
 import skillSass from './sass.png'
 import skillDocker from './docker.png'
 import skillGitlubGithub from './githubGitlub.jfif'
@@ -27,7 +26,6 @@ export {
   skillHtmlcssjs,
   skillNextjsIcon,
   skillMaterialUI,
-  skillBootstrap,
   skillSass,
   skillDocker,
   skillGitlubGithub,

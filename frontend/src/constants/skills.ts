@@ -11,7 +11,6 @@ import {
   skillHtmlcssjs,
   skillNextjsIcon,
   skillMaterialUI,
-  skillBootstrap,
   skillSass,
   skillDocker,
   skillGitlubGithub,
@@ -109,7 +108,7 @@ const skills: Skill[] = [
       },
       {
         name: "Bootstrap",
-        icon: skillBootstrap,
+        icon: skillDocker,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "Portfolio", link: "https://myblog.com" },
