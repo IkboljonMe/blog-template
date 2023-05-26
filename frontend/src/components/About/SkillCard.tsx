@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { SectionWrapper } from "../../hoc";
 import classes from "./styles.module.scss";
 import { fadeIn } from "../../utils/motion";
 import { Link } from "react-router-dom";
