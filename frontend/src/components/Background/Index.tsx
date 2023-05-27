@@ -16,14 +16,21 @@ const Background = () => {
     },
     []
   );
-  
+
   return (
     <div className={classes.wrapper}>
       <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
+        style={{
+          position: "absolute",
+          height: "90vh",
+          // paddingTop: "50px",
+          // marginTop: "100px",
+        }}
         options={{
+          fullScreen: { enable: false },
           fps_limit: 60,
           interactivity: {
             detect_on: "canvas",
