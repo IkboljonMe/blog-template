@@ -6,6 +6,16 @@ import {
   skillReactjs,
   skillNodejs,
   skillExpress,
+  skillMongoDb,
+  skillFireBase,
+  skillHtmlcssjs,
+  skillNextjsIcon,
+  skillMaterialUI,
+  skillSass,
+  skillDocker,
+  skillGitlubGithub,
+  skillPattern,
+  skillSolidPrinspl,
 } from "../assets/skills";
 const skills: Skill[] = [
   {
@@ -19,6 +29,7 @@ const skills: Skill[] = [
           { name: "Blog", link: "https://myblog.com" },
         ],
       },
+      
       {
         name: "Express",
         icon: skillExpress,
@@ -45,7 +56,7 @@ const skills: Skill[] = [
       },
       {
         name: "MongoDb",
-        icon: skillPrisma,
+        icon: skillMongoDb,
         projects: [
           { name: "UzShop", link: "https://auction.com" },
           { name: "News", link: "https://myblog.com" },
@@ -53,7 +64,7 @@ const skills: Skill[] = [
       },
       {
         name: "Firebase",
-        icon: skillPrisma,
+        icon: skillFireBase,
         projects: [
           { name: "UzShop", link: "https://auction.com" },
           { name: "News", link: "https://myblog.com" },
@@ -66,7 +77,7 @@ const skills: Skill[] = [
     data: [
       {
         name: "HTML|CSS|JS",
-        icon: skillNextjs,
+        icon: skillHtmlcssjs,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "App", link: "https://myblog.com" },
@@ -82,7 +93,7 @@ const skills: Skill[] = [
       },
       {
         name: "Nextjs",
-        icon: skillNextjs,
+        icon: skillNextjsIcon,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "App", link: "https://myblog.com" },
@@ -90,7 +101,7 @@ const skills: Skill[] = [
       },
       {
         name: "Material UI",
-        icon: skillReactjs,
+        icon: skillMaterialUI,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "Portfolio", link: "https://myblog.com" },
@@ -98,7 +109,7 @@ const skills: Skill[] = [
       },
       {
         name: "Bootstrap",
-        icon: skillReactjs,
+        icon: skillDocker,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "Portfolio", link: "https://myblog.com" },
@@ -106,7 +117,7 @@ const skills: Skill[] = [
       },
       {
         name: "SASS",
-        icon: skillPrisma,
+        icon: skillSass,
         projects: [
           { name: "UzShop", link: "https://auction.com" },
           { name: "News", link: "https://myblog.com" },
@@ -119,7 +130,7 @@ const skills: Skill[] = [
     data: [
       {
         name: "Docker",
-        icon: skillNextjs,
+        icon: skillDocker,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "App", link: "https://myblog.com" },
@@ -127,7 +138,7 @@ const skills: Skill[] = [
       },
       {
         name: "Github|Gitlab CI/CD",
-        icon: skillNextjs,
+        icon: skillGitlubGithub,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "App", link: "https://myblog.com" },
@@ -135,7 +146,7 @@ const skills: Skill[] = [
       },
       {
         name: "Design Patterns",
-        icon: skillNextjs,
+        icon: skillPattern,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "App", link: "https://myblog.com" },
@@ -143,7 +154,7 @@ const skills: Skill[] = [
       },
       {
         name: "Solid Princeples",
-        icon: skillNextjs,
+        icon: skillSolidPrinspl,
         projects: [
           { name: "Auction", link: "https://auction.com" },
           { name: "App", link: "https://myblog.com" },

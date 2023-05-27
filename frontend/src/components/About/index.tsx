@@ -5,7 +5,7 @@ import classes from "./styles.module.scss";
 
 const About = () => {
   return (
-    <>
+    <div>
       <motion.div variants={textVariant()}>
         <p className={classes.sectionSubText}>Briefly</p>
         <h2 className={classes.sectionHeadText}>About me</h2>
@@ -33,11 +33,9 @@ const About = () => {
         always looking for new and innovative ways to solve complex problems.
         Let's work together to create something great!
       </motion.p>
-      {/* {
-        TODO: FIX DEVICE
-      } */}
-    </>
+     
+    </div>
   );
 };
 
-export default SectionWrapper(About, "about");
+export default SectionWrapper(About, "about", "#fff");

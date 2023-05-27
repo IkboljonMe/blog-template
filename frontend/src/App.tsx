@@ -9,18 +9,22 @@ import {
   Skill,
 } from "./components";
 import classes from "./styles.module.scss";
+
+import Background from "./components/Background/Index";
 function App() {
   return (
     <BrowserRouter>
       <div className={classes.wrapper}>
-        <div className={classes.navbarAndHeroSection}>
-          <Navbar />
-          <Hero />
+        <div className={classes.container}>
+          <Background />
+          <div className={classes.navbarAndHeroSection}>
+            <Navbar />
+            <Hero />
+          </div>
         </div>
         <About />
         <Skill />
         <Experience />
-        <Works />
         <div className={classes.contactSection}>
           <Contact />
         </div>

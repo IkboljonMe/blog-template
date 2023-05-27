@@ -1,4 +1,8 @@
+
 @use "./breakpoints" as bp;
+
+
+
 
 @mixin hidden {
   display: none;
@@ -148,25 +152,27 @@
     #804dee 0%,
     rgba(60, 51, 80, 0) 100%
   );
+
 }
 @mixin black_gradient {
-  background: #000000; /* fallback for old browsers */
+ 
+  background: #fff; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
+    rgb(232, 223, 223),
+    #fff
+  );
   background: linear-gradient(
     to right,
-    #434343,
-    #000000
+    #0E0F31FF,
+    #0E0F31FF
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 @mixin green_pink_gradient {
-  background: "#00cea8";
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  // background: "#00cea8";
+  // background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  // background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 
 @mixin orange_text_gradient {

@@ -4,15 +4,17 @@ import { navLinks } from "../../constants";
 import { logo, menu, close } from "../../assets";
 import classes from "./styles.module.scss";
 import clsx from "clsx";
-
+import { FaTimes, FaBars } from "react-icons/fa";
+import {HiMenuAlt1} from 'react-icons/hi'
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
+      if (scrollTop > 200) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -43,7 +45,7 @@ const Navbar = () => {
           <img className={classes.favIcon} src={logo} alt="logo" />
           <p className={classes.title}>
             Ikboljon<p>Me</p> &nbsp;
-            <span className={classes.description}>| &nbsp; Portfolio</span>
+            <span className={classes.description}>|&nbsp;Portfolio</span>
           </p>
         </Link>
 
@@ -63,12 +65,12 @@ const Navbar = () => {
         </ul>
 
         <div className={classes.mobileMenuContainer}>
-          <img
+          <button
             className={classes.menuIcon}
-            src={toggle ? close : menu}
-            alt="menu"
             onClick={() => setToggle(!toggle)}
-          />
+          >
+            {toggle ? <FaTimes className={classes.icons} size={32} /> : <HiMenuAlt1 className={classes.icons} size={32} />}
+          </button>
 
           <div
             className={clsx(classes.mobileMenuItems, {
@@ -91,7 +93,9 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a className={classes.links} href={`#${nav.id}`}>
+                    {nav.title}
+                  </a>
                 </li>
               ))}
             </ul>

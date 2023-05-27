@@ -3,13 +3,24 @@
   position: relative;
   background-color: colors.$primary;
   z-index: 0;
+  // .zIndex {
+  //   position: relative;
+  //   z-index: -1;
+  // }
+}
+.container {
+  position: absolute;
+  width: 100%;
 }
 .navbarAndHeroSection {
+  height: 100%;
+  z-index: -1;
+  position: none;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   .contactSection {
     position: relative;
-    z-index: 0;
+    // z-index: 0;
   }
 }

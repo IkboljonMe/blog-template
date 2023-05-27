@@ -21,4 +21,4 @@ const Skill = () => {
   );
 };
 
-export default SectionWrapper(Skill, "skill");
+export default SectionWrapper(Skill, "skill",'#ffff');

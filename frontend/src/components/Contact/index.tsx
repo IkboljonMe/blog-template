@@ -64,7 +64,7 @@ const Contact = () => {
   };
 
   return (
-    <div className={classes.contactWrapper}>
+    <div className={classes.contactWrapper} style={{backgroundColor: '#fff'}}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className={classes.formContainer}
@@ -127,4 +127,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(Contact, "contact",'#fff');

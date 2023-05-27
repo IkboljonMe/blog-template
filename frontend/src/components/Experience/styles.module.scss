@@ -39,11 +39,11 @@
   }
 }
 .sectionSubText {
-  @include global.sectionSubText;
+  // @include global.sectionSubText;
   text-align: center;
 }
 .sectionHeadText {
-  @include global.sectionHeadText;
+  // @include global.sectionHeadText;
   text-align: center;
 }
 .timelineWrapper {
