@@ -29,6 +29,7 @@ const skills: Skill[] = [
           { name: "Blog", link: "https://myblog.com" },
         ],
       },
+      
       {
         name: "Express",
         icon: skillExpress,
