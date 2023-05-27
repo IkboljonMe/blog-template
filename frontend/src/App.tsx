@@ -19,8 +19,10 @@ function App() {
         <div className={classes.navbarAndHeroSection}>
           <Navbar />
           <Hero />
-          {/* <Background /> */}
+          <Background />
         </div>
+
+        <div className={classes.zIndex}>
         <About />
         <Skill />
         <Experience />
@@ -29,6 +31,7 @@ function App() {
           <Contact />
         </div>
         
+        </div>
       </div>
     </BrowserRouter>
   );

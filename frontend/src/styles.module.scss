@@ -3,6 +3,10 @@
   position: relative;
   background-color: colors.$primary;
   z-index: 0;
+  .zIndex{
+    position: relative;
+    z-index: 2;
+  }
 }
 .navbarAndHeroSection {
   background-size: cover;

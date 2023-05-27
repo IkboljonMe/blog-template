@@ -14,7 +14,7 @@
   ;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 999;
   background-color: aliceblue;
   color: #000;
 
@@ -166,16 +166,25 @@
 
 .scrolled {
   background-color: #fff;
+  padding: 9px 70px;
+  transition: all .3s;
   box-shadow: 3px 7px 12px -12px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 3px 7px 12px -12px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 7px 12px -12px rgba(0, 0, 0, 0.75);
+  @media (max-width: bp.$lg) {
+    padding: 9px 20px;
+  }
 }
 
 .unscrolled {
+  padding: 14px 70px;
   box-shadow: 3px 7px 12px -12px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 3px 7px 12px -12px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 7px 12px -12px rgba(0, 0, 0, 0.75);
   background-color: #fff;
+  @media (max-width: bp.$lg) {
+    padding: 14px 20px;
+  }
 }
 
 .activeMenu {

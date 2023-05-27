@@ -19,7 +19,7 @@ import Typewriter from "typewriter-effect";
 import SkillAnimation from "./SkillAnimation";
 import Background from "../Background/Index";
 import ParticleContainer from "../Background/Index";
-import broo from "../../assets/broo.jpeg";
+import broo from "../../assets/hero.png";
 import { Tilt } from "react-tilt";
 const getIcon = (name: string) => {
   if (name == "Telegram") {
@@ -99,8 +99,6 @@ const Hero = () => {
           <img src={broo} alt="" />
         </Tilt>
       </div>
-
-      {/* <ParticleContainer/> */}
     </section>
   );
 };
