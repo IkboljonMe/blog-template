@@ -42,9 +42,9 @@ const Background = () => {
             },
           },
           particles: {
-            color: { value: "#ffffff" },
+            color: { value: "#000" },
             line_linked: {
-              color: "#ffffff",
+              color: "#000",
               distance: 150,
               enable: true,
               opacity: 0.4,
