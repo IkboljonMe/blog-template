@@ -7,7 +7,8 @@
 }
 .sectionHeadText {
   text-align: center;
-  @include global.sectionHeadText;
+  color: #000;
+  // @include global.sectionHeadText;
 }
 .cardWrapper {
   width: 100%;
@@ -65,6 +66,7 @@
 }
 .servicesContainer {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 5rem;
   display: grid;
   gap: 2.5rem;

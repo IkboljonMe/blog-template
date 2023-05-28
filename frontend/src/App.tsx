@@ -22,11 +22,14 @@ function App() {
             <Hero />
           </div>
         </div>
+        <div className={classes.emptyPlace}>
+
+        </div>
         <About />
         <Skill />
-        <Experience />
+        {/* <Experience /> */}
         <div className={classes.contactSection}>
-          <Contact />
+          {/* <Contact /> */}
         </div>
       </div>
     </BrowserRouter>
