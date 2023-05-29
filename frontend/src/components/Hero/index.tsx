@@ -4,6 +4,8 @@ import { socialLinks } from "../../constants";
 import { Link } from "react-router-dom";
 import { SocialLink } from "../../constants/index.types";
 import { motion } from "framer-motion";
+import { container, zoomIn, mainImg } from "../../utils/motion";
+
 import {
   BsGithub,
   BsInstagram,
@@ -20,7 +22,12 @@ import { Tilt } from "react-tilt";
 const Hero = () => {
   return (
     <section className={classes.heroSectionWrapper}>
-      <div className={classes.headerName}>
+      <motion.div
+        initial={"hidden"}
+        animate={"visible"}
+        variants={mainImg}
+        className={classes.headerName}
+      >
         <h1>Hi There,</h1>
         <h1>
           I'm Ikboljon <span>Abdurasulov</span>
@@ -47,7 +54,6 @@ const Hero = () => {
           <IoChevronDownOutline className={classes.downloadIcon} size={27} />{" "}
         </button>
         <div className={classes.socialIcons}>
-         
           <Link to="/">
             <BsLinkedin className={classes.socialIcon} size={20} />
           </Link>
@@ -63,10 +69,14 @@ const Hero = () => {
           <Link to="/">
             <BsTwitter className={classes.socialIcon} size={20} />
           </Link>
-        
         </div>
-      </div>
-      <div className={classes.headerImg}>
+      </motion.div>
+      <motion.div
+        initial={"hidden"}
+        animate={"visible"}
+        variants={mainImg}
+        className={classes.headerImg}
+      >
         <Tilt
           options={{
             max: 25,
@@ -77,7 +87,7 @@ const Hero = () => {
         >
           <img src={broo} alt="" />
         </Tilt>
-      </div>
+      </motion.div>
     </section>
   );
 };

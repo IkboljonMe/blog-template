@@ -4,6 +4,7 @@ import { textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
 import Tabs from "./TabsTitle/Tabs";
 import Tab from "./TabsTitle/Tab";
+import { fadeIn } from "../../utils/motion";
 import { skills } from "../../constants";
 const Skill = () => {
   return (
@@ -12,12 +13,15 @@ const Skill = () => {
         {skills.map(({ title, data }) => (
           <Tab title={title}>
             <div className={classes.btn}>
-              {data.map(({ icon, name }) => (
-                <div className={classes.icons}>
+              {data.map(({ icon, name }, index) => (
+                <motion.div
+                  variants={fadeIn("", "spring", index * 0.3, 0.75)}
+                  className={classes.icons}
+                >
                   <img src={icon} alt="" />
                   <h4>{name}</h4>
                   <h5>Intermediate</h5>
-                </div>
+                </motion.div>
               ))}
             </div>
           </Tab>
