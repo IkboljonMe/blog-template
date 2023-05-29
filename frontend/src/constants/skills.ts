@@ -52,6 +52,54 @@ const skills: Skill[] = [
         name: "Reactjs",
         icon: reactJs,
       },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
     ],
   },
   {

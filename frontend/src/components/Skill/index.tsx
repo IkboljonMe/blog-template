@@ -16,6 +16,7 @@ const Skill = () => {
                 <div className={classes.icons}>
                   <img src={icon} alt="" />
                   <h4>{name}</h4>
+                  <h5>Intermediate</h5>
                 </div>
               ))}
             </div>
@@ -26,4 +27,4 @@ const Skill = () => {
   );
 };
 
-export default SectionWrapper(Skill, "skill", "#5504ACFF");
+export default SectionWrapper(Skill, "skills", "#5504ACFF");

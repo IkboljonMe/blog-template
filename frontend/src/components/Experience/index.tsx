@@ -7,12 +7,13 @@ import { textVariant } from "../../utils/motion";
 import classes from "./styles.module.scss";
 import ExperienceCard from "./ExperienceCard";
 
-const ExperienceFc = () => {
+const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={classes.sectionSubText}>What I have done so far</p>
         <h2 className={classes.sectionHeadText}>Work Experience.</h2>
+        <h4>HERE</h4>
       </motion.div>
 
       <div className={classes.timelineWrapper}>
@@ -29,4 +30,4 @@ const ExperienceFc = () => {
   );
 };
 
-export default SectionWrapper(ExperienceFc, "experience", '#fff');
+export default SectionWrapper(Experience, "experience", "#fff");
