@@ -1,0 +1,16 @@
+@use "../../../styles/global"as global;
+@use "../../../styles/colors"as colors;
+@use "../../../styles/breakpoints"as bp;
+
+.tabTitle {
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        padding-bottom: 5px;
+        color: #fff;
+        transition: all 1s;
+        .skillTitle{
+            color: #fff;
+            font-size: 22px;
+        }
+}

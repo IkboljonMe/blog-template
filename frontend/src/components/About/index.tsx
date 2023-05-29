@@ -4,6 +4,7 @@ import { fadeIn, textVariant } from "../../utils/motion";
 import classes from "./styles.module.scss";
 import imgMe from "../../assets/profile2.jpg";
 import { AiOutlineDownload } from "react-icons/ai";
+import { Tilt } from "react-tilt";
 const PDF_FILE_URL='http://localhost:5173/resumeMe.pdf'
 const About = () => {
   const handleDownload = () => {
@@ -29,7 +30,17 @@ const About = () => {
 
       <div className={classes.aboutMeAndImg}>
         <div className={classes.cardImg}>
-          <img src={imgMe} alt="" />
+        <Tilt 
+        options={{
+          max: 17,
+          transition: 0.5,
+          scale: 1,
+          speed: 450,
+        }}
+        >
+        <img src={imgMe} alt="" />
+
+        </Tilt>
         </div>
         <div className={classes.aboutMe}>
           <h2>I'm Ikboljon</h2>

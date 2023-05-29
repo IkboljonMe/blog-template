@@ -27,9 +27,9 @@ function App() {
         </div>
         <About />
         <Skill />
-        {/* <Experience /> */}
+        <Experience />
         <div className={classes.contactSection}>
-          {/* <Contact /> */}
+          <Contact />
         </div>
       </div>
     </BrowserRouter>
