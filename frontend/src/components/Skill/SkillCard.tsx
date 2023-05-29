@@ -11,8 +11,6 @@ interface SkillCardProps {
 }
 const SkillCard: React.FC<SkillCardProps> = ({ development, index }) => {
   const { name, data } = development;
-  console.log(index);
-  console.log(data);
   return (
     <Tilt
       options={{

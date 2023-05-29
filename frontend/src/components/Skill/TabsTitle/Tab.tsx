@@ -1,13 +1,11 @@
-import React,{FC,ReactNode} from "react";
+import React from "react";
 
-interface Props{
-    title: string;
-    children: ReactNode;
+interface Props {
+  children: React.ReactNode;
+  title: string;
 }
 
-const Tab: FC<Props>=({children})=>{
-    return <div>
-        {children}
-    </div>
-}
+const Tab: React.FC<Props> = ({ children }) => {
+  return <div>{children}</div>;
+};
 export default Tab;

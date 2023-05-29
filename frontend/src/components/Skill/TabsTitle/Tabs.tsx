@@ -1,41 +1,30 @@
-import React,{FC,ReactElement,useState} from "react";
-import TabTitle  from './TabTitle';
+import React, { useState } from "react";
+import TabTitle from "./TabTitle";
+import classes from "./styles.module.scss";
 
-interface Props{
-    children: ReactElement[]
-
+interface Props {
+  children: React.ReactElement[];
 }
 
-const Tabs: FC<Props>=({children})=>{
-    const [selectedTab,setSelectedTab]=useState(0)
-    const [isActive,setIsActive] = useState(0)
+const Tabs: React.FC<Props> = ({ children }) => {
+  const [selectedTab, setSelectedTab] = useState(0);
 
-    return (
-        <div>
-            <div
-            style={{
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'row',
-                padding: '10px',
-                color: '#000'
-              }}
-            >
-                {children.map((item,index)=>(
-                    <TabTitle 
-                    key={index}
-                    title={item.props.title}
-                    index={index}
-                    setSelectedTab={setSelectedTab}
-                    setIsActive={setIsActive}
-                    isActive={isActive}
-                    />
-                    
-                ))}
-            </div>
-            {children[selectedTab]}
-        </div>
-    )
-}
+  return (
+    <div>
+      <div className={classes.tabTitleContainer}>
+        {children.map((item, index) => (
+          <TabTitle
+            key={index}
+            title={item.props.title}
+            index={index}
+            setSelectedTab={setSelectedTab}
+            selectedTab={selectedTab}
+          />
+        ))}
+      </div>
+      {children[selectedTab]}
+    </div>
+  );
+};
 
 export default Tabs;
