@@ -1,164 +1,142 @@
-import { Skill } from "./index.types";
 import {
-  skillNextjs,
-  skillPostgreSQL,
-  skillPrisma,
-  skillReactjs,
-  skillNodejs,
-  skillExpress,
-  skillMongoDb,
-  skillFireBase,
-  skillHtmlcssjs,
-  skillNextjsIcon,
-  skillMaterialUI,
-  skillSass,
-  skillDocker,
-  skillGitlubGithub,
-  skillPattern,
-  skillSolidPrinspl,
-} from "../assets/skills";
+  reactJs,
+  expressJS,
+  nodejs,
+  redux,
+  firebase,
+  android,
+  materialUI,
+  chakraUI,
+  tailwindcss,
+  bootstrap,
+  sass,
+  html,
+  css3,
+  js,
+  java,
+  kotlin,
+  php,
+  python,
+  cpp,
+  mongodb,
+  mysql,
+  postgresql,
+  aws,
+  heroku,
+  netlify,
+  digitalocean,
+  jquery,
+  gitvcs,
+  github,
+  wordpress,
+} from "../assets/skillsIcons";
+import { Skill } from "./index.types";
+
 const skills: Skill[] = [
   {
-    name: "Backend developer",
+    title: "Frontend",
     data: [
       {
-        name: "Nodejs",
-        icon: skillNodejs,
-        projects: [
-          { name: "Auction", link: "https://auction.com" },
-          { name: "Blog", link: "https://myblog.com" },
-        ],
-      },
-      
-      {
-        name: "Express",
-        icon: skillExpress,
-        projects: [
-          { name: "Auction", link: "https://auction.com" },
-          { name: "Blog", link: "https://myblog.com" },
-        ],
-      },
-      {
-        name: "PostgreSQL",
-        icon: skillPostgreSQL,
-        projects: [
-          { name: "Auction", link: "https://auction.com" },
-          { name: "BlogUz", link: "https://myblog.com" },
-        ],
-      },
-      {
-        name: "Prisma",
-        icon: skillPrisma,
-        projects: [
-          { name: "UzShop", link: "https://auction.com" },
-          { name: "News", link: "https://myblog.com" },
-        ],
-      },
-      {
-        name: "MongoDb",
-        icon: skillMongoDb,
-        projects: [
-          { name: "UzShop", link: "https://auction.com" },
-          { name: "News", link: "https://myblog.com" },
-        ],
-      },
-      {
-        name: "Firebase",
-        icon: skillFireBase,
-        projects: [
-          { name: "UzShop", link: "https://auction.com" },
-          { name: "News", link: "https://myblog.com" },
-        ],
-      },
-    ],
-  },
-  {
-    name: "Front-end developer",
-    data: [
-      {
-        name: "HTML|CSS|JS",
-        icon: skillHtmlcssjs,
-        projects: [
-          { name: "Auction", link: "https://auction.com" },
-          { name: "App", link: "https://myblog.com" },
-        ],
+        name: "Reactjs",
+        icon: reactJs,
       },
       {
         name: "Reactjs",
-        icon: skillReactjs,
-        projects: [
-          { name: "Auction", link: "https://auction.com" },
-          { name: "Portfolio", link: "https://myblog.com" },
-        ],
+        icon: reactJs,
       },
       {
-        name: "Nextjs",
-        icon: skillNextjsIcon,
-        projects: [
-          { name: "Auction", link: "https://auction.com" },
-          { name: "App", link: "https://myblog.com" },
-        ],
+        name: "Reactjs",
+        icon: reactJs,
       },
       {
-        name: "Material UI",
-        icon: skillMaterialUI,
-        projects: [
-          { name: "Auction", link: "https://auction.com" },
-          { name: "Portfolio", link: "https://myblog.com" },
-        ],
+        name: "Reactjs",
+        icon: reactJs,
       },
       {
-        name: "Bootstrap",
-        icon: skillDocker,
-        projects: [
-          { name: "Auction", link: "https://auction.com" },
-          { name: "Portfolio", link: "https://myblog.com" },
-        ],
+        name: "Reactjs",
+        icon: reactJs,
       },
       {
-        name: "SASS",
-        icon: skillSass,
-        projects: [
-          { name: "UzShop", link: "https://auction.com" },
-          { name: "News", link: "https://myblog.com" },
-        ],
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
+      },
+      {
+        name: "Reactjs",
+        icon: reactJs,
       },
     ],
   },
   {
-    name: "Additional",
+    title: "Backend",
     data: [
       {
-        name: "Docker",
-        icon: skillDocker,
-        projects: [
-          { name: "Auction", link: "https://auction.com" },
-          { name: "App", link: "https://myblog.com" },
-        ],
+        name: "Express js",
+        icon: expressJS,
       },
       {
-        name: "Github|Gitlab CI/CD",
-        icon: skillGitlubGithub,
-        projects: [
-          { name: "Auction", link: "https://auction.com" },
-          { name: "App", link: "https://myblog.com" },
-        ],
+        name: "Express js",
+        icon: expressJS,
       },
       {
-        name: "Design Patterns",
-        icon: skillPattern,
-        projects: [
-          { name: "Auction", link: "https://auction.com" },
-          { name: "App", link: "https://myblog.com" },
-        ],
+        name: "Express js",
+        icon: expressJS,
+      },
+    ],
+  },
+  {
+    title: "Additional",
+    data: [
+      {
+        name: "Heroku",
+        icon: heroku,
       },
       {
-        name: "Solid Princeples",
-        icon: skillSolidPrinspl,
-        projects: [
-          { name: "Auction", link: "https://auction.com" },
-          { name: "App", link: "https://myblog.com" },
-        ],
+        name: "Heroku",
+        icon: heroku,
+      },
+      {
+        name: "Heroku",
+        icon: heroku,
+      },
+      {
+        name: "Heroku",
+        icon: heroku,
       },
     ],
   },

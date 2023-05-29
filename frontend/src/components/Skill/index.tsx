@@ -1,24 +1,30 @@
 import classes from "./styles.module.scss";
-import { skills } from "../../constants";
-import SkillCard from "./SkillCard";
 import { motion } from "framer-motion";
 import { textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
-
+import Tabs from "./TabsTitle/Tabs";
+import Tab from "./TabsTitle/Tab";
+import { skills } from "../../constants";
 const Skill = () => {
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={classes.sectionSubText}>Briefly</p>
-        <h2 className={classes.sectionHeadText}>About me</h2>
-      </motion.div>
-      <div className={classes.servicesContainer}>
-        {skills.map((development, index) => (
-          <SkillCard development={development} index={index} />
+    <div className={classes.skills}>
+      <Tabs>
+        {skills.map(({ title, data }) => (
+          <Tab title={title}>
+            <div className={classes.btn}>
+              {data.map(({ icon, name }) => (
+                <div className={classes.icons}>
+                  <img src={icon} alt="" />
+                  <h4>{name}</h4>
+                  <h5>Intermediate</h5>
+                </div>
+              ))}
+            </div>
+          </Tab>
         ))}
-      </div>
-    </>
+      </Tabs>
+    </div>
   );
 };
 
-export default SectionWrapper(Skill, "skill",'#ffff');
+export default SectionWrapper(Skill, "skills", "#5504ACFF");

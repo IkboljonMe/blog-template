@@ -1,90 +1,157 @@
 @use "../../styles/global" as global;
 @use "../../styles/colors" as colors;
 @use "../../styles/breakpoints" as bp;
-
-.sectionSubText {
-  @include global.sectionSubText;
-  text-align: center;
-}
-.sectionHeadText {
-  text-align: center;
-  @include global.sectionHeadText;
-}
-.cardWrapper {
-  width: 100%;
-  @include global.green_pink_gradient;
-  padding: 1px;
-  border-radius: 20px;
-  .card {
-    background: colors.$tertiary;
-    border-radius: 20px;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    min-height: 280px;
-    display: flex;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    flex-direction: column;
-    .skill {
-      display: flex;
-      margin-top: 1.5rem;
-      justify-content: space-between;
-      flex-direction: row;
-      background-color: #fff;
-      h3 {
-        margin-bottom: 1rem;
-      }
-      .skillName {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        img {
-          width: 30px;
-          border-radius: 50%;
-          &:hover{
-            transform: translateX(5px);
-            transition: all .3s;
-          }
-        }
-        .toLink {
-          display: flex;
-        }
-      }
-      .projects {
-        display: flex;
-        div {
-          padding-right: 6px;
-          padding-right: 6px;
-          display: flex;
-          align-items: center;
-        }
-      }
-    }
+.about{
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  @media (max-width: bp.$xxl) {
+    height: 129vh;
+  } 
+  @media (max-width: bp.$xl) {
+    height: 190vh;
+  } 
+  @media (max-width: bp.$lg) {
+    height: 212vh;
+  } 
+  @media (max-width: bp.$md) {
+    height: 205vh;
+  } 
+  @media (max-width: bp.$sm) {
+    height: 220vh;
+  } 
+  @media (max-width: bp.$xsmm) {
+    height: 280vh;
+  } 
+  @media (max-width: bp.$xsm) {
+    height: 280vh;
   }
-  h3 {
-    color: colors.$white;
-    font-size: 1.25rem;
-    font-weight: bold;
+  @media (max-width: bp.$xs) {
+    height: 320vh;
+  }
+  @media (max-width: bp.$xss) {
+    height: 330vh;
+  }
+  .sectionSubText{
+    color: rgb(74, 73, 73);
     text-align: center;
   }
+  .sectionHeadText{
+
+    color: #000;
+    font-size: 45px;
+    text-align: center;
+    span{
+      color: #F0662BFF;
+    }
+  }
+  .aboutMeAndImg{
+    padding-top: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: bp.$lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .cardImg{
+    img{
+      border-radius: 13px;
+      width: 280px;
+      height: 400px;
+      @media (max-width: bp.$lg) {
+        margin: auto;
+        width: 290px;
+        height: 35  0px;
+        margin-left: 20px;
+      }
+    }
+    @media (max-width: bp.$md) {
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      img{
+        margin: auto;
+      }
+    }
+  } 
+  .aboutMe{
+    width: 60%;
+    padding: 0 30px;
+    @media (max-width: bp.$lg) {
+      width: 100%;
+      padding: 0 18px;
+    }
+    h2{
+      color: #000;
+      margin-bottom: 4px;
+
+    }
+    h4{
+      color: #444;
+      margin-bottom: 20px;
+    }
+    p{
+      text-align: justify;
+      color: #111;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 15px;
+      span{
+        color: #F0662BFF;
+        font-size: 18px;
+
+      }
+    }
+    .resume {
+      background-color: #2506ADFF;
+      padding: 5px 19px;
+      border-radius: 25px;
+      border: none;
+      font-size: 20px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      box-shadow: 1px 1px 9px 4px rgba(85, 56, 218, 0.55);
+      -webkit-box-shadow: 1px 1px 9px 4px rgba(98, 71, 214, 0.5);
+      -moz-box-shadow: 1px 1px 9px 4px rgba(105, 85, 196, 0.55);
+      margin-bottom: 20px;
+      margin-top: 60px;
+      position: relative;
+      z-index: 2;
+
+      &:hover {
+        transition: all .5s;
+        box-shadow: 1px 1px 9px 0px rgba(37, 6, 173, 0.75);
+        -webkit-box-shadow: 1px 1px 9px 0px rgba(37, 6, 173, 0.75);
+        -moz-box-shadow: 1px 1px 9px 0px rgba(37, 6, 173, 0.75);
+        background-color: rgb(30, 6, 138);
+
+        .downloadIcon {
+          transition: all .5s;
+          transform: translateX(5px);
+
+        }
+
+      }
+
+      .downloadIcon {
+        margin-left: 10px;
+
+
+        &:hover {
+          transition: all .3s;
+          transform: translateX(5px);
+        }
+      }
+
+    }
+  }
+
 }
 
-.description {
-  width: 100%;
-  margin-top: 1rem;
-  color: colors.$secondary;
-  font-size: 1rem;
-  // max-width: bp.$md;
-  line-height: 30px;
-}
-.servicesContainer {
-  display: flex;
-  margin-top: 5rem;
-  display: grid;
-  gap: 2.5rem;
-  grid-template-columns: 1fr;
-  @media (max-width: bp.$sm) {
-    grid-template-columns: 1fr 1fr;
-    display: none;
-  }
-}
+

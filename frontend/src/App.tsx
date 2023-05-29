@@ -22,6 +22,9 @@ function App() {
             <Hero />
           </div>
         </div>
+        <div className={classes.emptyPlace}>
+
+        </div>
         <About />
         <Skill />
         <Experience />

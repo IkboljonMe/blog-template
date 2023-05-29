@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import { SocialLink } from "../../constants/index.types";
 import { motion } from "framer-motion";
 import {
-  BsDeviceHdd,
-  BsDeviceSsd,
   BsGithub,
   BsInstagram,
   BsLinkedin,
@@ -14,29 +12,10 @@ import {
   BsTwitter,
   BsYoutube,
 } from "react-icons/bs";
-import { AiOutlineDownload } from "react-icons/ai";
+import { IoChevronDownOutline } from "react-icons/io5";
 import Typewriter from "typewriter-effect";
-import SkillAnimation from "./SkillAnimation";
-import Background from "../Background/Index";
-import ParticleContainer from "../Background/Index";
 import broo from "../../assets/hero.png";
 import { Tilt } from "react-tilt";
-const getIcon = (name: string) => {
-  if (name == "Telegram") {
-    return <BsTelegram />;
-  }
-  if (name == "Github") {
-    return <BsGithub />;
-  }
-  if (name == "Linkedin") {
-    return <BsLinkedin />;
-  }
-  if (name == "Youtube") {
-    return <BsYoutube />;
-  } else {
-    return;
-  }
-};
 
 const Hero = () => {
   return (
@@ -65,7 +44,7 @@ const Hero = () => {
         </p>
         <button>
           About Me{" "}
-          <AiOutlineDownload className={classes.downloadIcon} size={27} />{" "}
+          <IoChevronDownOutline className={classes.downloadIcon} size={27} />{" "}
         </button>
         <div className={classes.socialIcons}>
          
