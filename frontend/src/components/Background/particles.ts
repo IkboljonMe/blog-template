@@ -7,7 +7,7 @@ const options: Options = {
       onclick: { enable: true, mode: "push" },
       onhover: {
         enable: true,
-        mode: "attract",
+        mode: "repulse",
         parallax: { enable: false, force: 60, smooth: 10 },
       },
       resize: true,
@@ -86,7 +86,7 @@ type Options = {
       onclick: { enable: boolean; mode: "push" };
       onhover: {
         enable: boolean;
-        mode: "attract";
+        mode: "repulse";
         parallax: { enable: boolean; force: number; smooth: number };
       };
       resize: boolean;
