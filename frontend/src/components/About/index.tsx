@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../../hoc";
-import { fadeIn, textVariant, slideIn } from "../../utils/motion";
-import classes from "./styles.module.scss";
+import { slideIn } from "../../utils/motion";
 import imgMe from "../../assets/profile2.jpg";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Tilt } from "react-tilt";
-import CV from "../../assets/cv.9502c5eda7efc6c3a134.pdf";
 import { Link } from "react-router-dom";
+import classes from "./styles.module.scss";
+
+import CV from "../../assets/cv.9502c5eda7efc6c3a134.pdf";
+
 const About = () => {
   return (
     <div className={classes.about}>
@@ -16,7 +18,6 @@ const About = () => {
           About <span>Me</span>
         </h2>
       </motion.div>
-
       <div className={classes.aboutMeAndImg}>
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}

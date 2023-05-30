@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../../constants";
-import { logo, menu, close } from "../../assets";
-import classes from "./styles.module.scss";
+import { logo } from "../../assets";
 import clsx from "clsx";
-import { FaTimes, FaBars } from "react-icons/fa";
-import {HiMenuAlt1} from 'react-icons/hi'
+import { FaTimes } from "react-icons/fa";
+import { HiMenuAlt1 } from "react-icons/hi";
+
+import classes from "./styles.module.scss";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -69,7 +70,11 @@ const Navbar = () => {
             className={classes.menuIcon}
             onClick={() => setToggle(!toggle)}
           >
-            {toggle ? <FaTimes className={classes.icons} size={32} /> : <HiMenuAlt1 className={classes.icons} size={32} />}
+            {toggle ? (
+              <FaTimes className={classes.icons} size={32} />
+            ) : (
+              <HiMenuAlt1 className={classes.icons} size={32} />
+            )}
           </button>
 
           <div

@@ -1,5 +1,5 @@
 import { Experience } from "./index.types";
-import node from "../assets/skills/nodejs.svg";
+import node from "../assets/github.png";
 const experiences: Experience[] = [
   {
     title: "Volunteer Software Developer",

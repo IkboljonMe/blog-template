@@ -1,16 +1,9 @@
 import { BrowserRouter } from "react-router-dom";
-import {
-  About,
-  Contact,
-  Experience,
-  Hero,
-  Navbar,
-  Works,
-  Skill,
-} from "./components";
+import { About, Contact, Experience, Hero, Navbar, Skill } from "./components";
+import Background from "./components/Background/Index";
+
 import classes from "./styles.module.scss";
 
-import Background from "./components/Background/Index";
 function App() {
   return (
     <BrowserRouter>
@@ -22,9 +15,7 @@ function App() {
             <Hero />
           </div>
         </div>
-        <div className={classes.emptyPlace}>
-
-        </div>
+        <div className={classes.emptyPlace}></div>
         <About />
         <Skill />
         <Experience />
