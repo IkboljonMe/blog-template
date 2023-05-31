@@ -1,39 +1,27 @@
-import React, { useState } from 'react';
-
-interface CardProps {
-  title: string;
-  content: string;
+import classes from "./styles.module.scss";
+import clsx from "clsx";
+import React from "react";
+interface ModalProps {
+  isModalOpen: boolean;
+  setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
-
-const Card: React.FC<CardProps> = ({ title, content }) => {
-  const [showModal, setShowModal] = useState(false);
-
-  const openModal = () => {
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
-
+const Modal: React.FC<ModalProps> = ({ isModalOpen, setIsModalOpen }) => {
   return (
-    <div className="card">
-      <h3>{title}</h3>
-      <p>{content}</p>
-      <button onClick={openModal}>Open Modal</button>
-
-      {showModal && (
-        <div className="modal">
+    <div
+      className={clsx({
+        [classes.modal]: true,
+        [classes.isModalOpen]: isModalOpen,
+      })}
+    >
+      <div className="modal">
           <div className="modal-content">
-            <span className="close" onClick={closeModal}>&times;</span>
-            <h2>{title}Salom</h2>
-            <p>{content}</p>
+            <span className="close" onClick={()=>setIsModalOpen(false)}>Close</span>
+            <h2>Salom</h2>
+            <p>Lorem</p>
           </div>
         </div>
-      )}
     </div>
   );
 };
 
-export default Card;
-
+export default Modal;

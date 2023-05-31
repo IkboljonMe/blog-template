@@ -1,16 +1,11 @@
 import classes from "./styles.module.scss";
 import { motion } from "framer-motion";
-import { textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
 import Tabs from "./TabsTitle/Tabs";
 import Tab from "./TabsTitle/Tab";
-import { fadeIn } from "../../utils/motion";
 import { skills } from "../../constants";
-import Modal from "../../components/Skill/Modal/index"
-import { useState } from "react";
 const Skill = () => {
-  const [openModal, setOpenModal] = useState(false);
-  
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className={classes.skills}>
       <Tabs>
@@ -18,15 +13,16 @@ const Skill = () => {
           <Tab title={title}>
             <div className={classes.btn}>
               {data.map(({ icon, name }, index) => (
-                <div onClick={()=>{setOpenModal(true)}} className={classes.icons}>
+                <motion.div
+                  variants={fadeIn("", "spring", index * 0.3, 0.75)}
+                  className={classes.icons}
+                >
                   <img src={icon} alt="" />
                   <h4>{name}</h4>
                   <h5>Intermediate</h5>
                 </div>
               ))}
             </div>
-
-
           </Tab>
         ))}
       </Tabs>
