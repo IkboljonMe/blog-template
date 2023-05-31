@@ -4,6 +4,7 @@ import { SectionWrapper } from "../../hoc";
 import Tabs from "./TabsTitle/Tabs";
 import Tab from "./TabsTitle/Tab";
 import { skills } from "../../constants";
+import { useState } from "react";
 const Skill = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
@@ -14,13 +15,12 @@ const Skill = () => {
             <div className={classes.btn}>
               {data.map(({ icon, name }, index) => (
                 <motion.div
-                  variants={fadeIn("", "spring", index * 0.3, 0.75)}
                   className={classes.icons}
                 >
                   <img src={icon} alt="" />
                   <h4>{name}</h4>
                   <h5>Intermediate</h5>
-                </div>
+                </motion.div>
               ))}
             </div>
           </Tab>
