@@ -1,21 +1,23 @@
 import classes from "./styles.module.scss";
 import { motion } from "framer-motion";
-import { textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
 import Tabs from "./TabsTitle/Tabs";
 import Tab from "./TabsTitle/Tab";
-import { fadeIn } from "../../utils/motion";
 import { skills } from "../../constants";
+import { useState } from "react";
+import Modal from "./Modal";
 const Skill = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className={classes.skills}>
       <Tabs>
         {skills.map(({ title, data }) => (
           <Tab title={title}>
             <div className={classes.btn}>
-              {data.map(({ icon, name }, index) => (
+              {data.map(({ icon, name }) => (
                 <motion.div
-                  variants={fadeIn("", "spring", index * 0.3, 0.75)}
+                  onClick={() => setIsModalOpen(true)}
+                  whileHover={{ scale: 1.05 }}
                   className={classes.icons}
                 >
                   <img src={icon} alt="" />
@@ -24,6 +26,12 @@ const Skill = () => {
                 </motion.div>
               ))}
             </div>
+            {
+              <Modal
+                isModalOpen={isModalOpen}
+                setIsModalOpen={setIsModalOpen}
+              />
+            }
           </Tab>
         ))}
       </Tabs>
