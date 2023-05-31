@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { About, Contact, Experience, Hero, Navbar, Skill } from "./components";
 import Background from "./components/Background/Index";
-
+import Modal from './components/Skill/Modal/index'
 import classes from "./styles.module.scss";
 
 function App() {

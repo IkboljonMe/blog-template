@@ -9,8 +9,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#000000",
-        color: "#fff",
+        background: "#000",
+        color: "#000",
       }}
       style={{ backgroundColor: "#fff", margin: 0, padding: 0 }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
