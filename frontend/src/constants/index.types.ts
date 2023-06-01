@@ -23,3 +23,9 @@ export type SocialLink = {
   icon: any;
   link: string;
 };
+export type Modal = {
+  title: string;
+  projectName: string;
+  img: any; 
+  points: string[]; 
+}
