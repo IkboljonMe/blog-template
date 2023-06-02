@@ -5,6 +5,7 @@ import Tabs from "./TabsTitle/Tabs";
 import Tab from "./TabsTitle/Tab";
 import { skills } from "../../constants";
 import { useState } from "react";
+import Modal from "./Modal";
 const Skill = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
@@ -15,6 +16,7 @@ const Skill = () => {
             <div className={classes.btn}>
               {data.map(({ icon, name }, index) => (
                 <motion.div
+                onClick={() => setIsModalOpen(true)}
                   className={classes.icons}
                 >
                   <img src={icon} alt="" />
@@ -23,6 +25,9 @@ const Skill = () => {
                 </motion.div>
               ))}
             </div>
+            <Modal isModalOpen={isModalOpen}
+            setIsModalOpen={setIsModalOpen}
+            />
           </Tab>
         ))}
       </Tabs>
