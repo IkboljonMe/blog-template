@@ -8,7 +8,6 @@ import {Modal} from "../../../constants/index.types"
 import { HiCode } from "react-icons/hi";
 
 interface ModalProps {
-  modals: Modal;
   isModalOpen: boolean;
   setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
