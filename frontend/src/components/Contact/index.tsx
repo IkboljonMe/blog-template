@@ -5,7 +5,12 @@ import emailjs from "@emailjs/browser";
 import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
 import classes from "./styles.module.scss";
-
+import { Link } from "react-router-dom";
+import contactImg from '../../assets/contactImg.jpg'
+import {FaUser} from 'react-icons/fa'
+import {MdEmail,MdMessage} from 'react-icons/md'
+import {BsSendFill} from 'react-icons/bs'
+import {SiGooglemessages} from 'react-icons/si'
 const Contact = () => {
   const formRef = useRef<any>();
   const [form, setForm] = useState({
@@ -64,43 +69,26 @@ const Contact = () => {
   };
 
   return (
-    <div className={classes.contactWrapper} style={{backgroundColor: '#fff'}}>
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className={classes.formContainer}
-      >
-        <p>Get in touch</p>
-        <h3>Contact.</h3>
-
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your web address?"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
-            <textarea
+    <div className={classes.contactWrapper}>
+      <div className={classes.contactSend}>
+     <div className={classes.imgTitle}>
+      <h1>Say Hi! 🙌</h1>
+      <h2>Reach out and let's bring your ideas to life!</h2>
+      <h2>I'm available for freelance work.</h2>
+      <p><SiGooglemessages size={30}/> <Link to='/'>ikboljon2003@gmail.com</Link></p>
+     <img src={contactImg} width={350} alt="" />
+     </div>
+      <div>
+        <form>
+         <div className={classes.btnInput}>
+         <button><FaUser className={classes.faUser} size={22}/></button><input type="text" placeholder="Your Name"/>
+         </div>
+         <div className={classes.btnInput}>
+         <button><MdEmail className={classes.faUser} size={22}/></button><input type="email"placeholder="Your email" />
+         </div>
+         <div className={classes.btnInput}>
+         <button><MdMessage className={classes.faUser} size={22}/></button>
+         <textarea
               rows={7}
               name="message"
               value={form.message}
@@ -108,23 +96,17 @@ const Contact = () => {
               placeholder="What you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
-          </label>
-
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
+        
+         </div>
+         <div className={classes.submitBtn}>
+          <button>Submit <BsSendFill className={classes.sendIcon}/></button>
+         </div>
         </form>
-      </motion.div>
-
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className={classes.earthCanvasContainer}
-      ></motion.div>
+      </div>
+      </div>
+     
     </div>
   );
 };
 
-export default SectionWrapper(Contact, "contact",'#fff');
+export default SectionWrapper(Contact, "contact", "#fff");
