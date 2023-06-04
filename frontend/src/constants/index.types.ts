@@ -9,7 +9,6 @@ export type Experience = {
   iconBg: string;
   date: string;
   points: string[];
-  lineColor: string;
 };
 type SkillData = {
   name: string;
