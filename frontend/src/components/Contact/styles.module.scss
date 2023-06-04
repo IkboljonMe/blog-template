@@ -107,6 +107,10 @@
         transition: .3s;
         color: indigo;
         padding-left: 40px;
+        @media (max-width: bp.$mmd) {
+          width: 100%;
+         }
+        
       }
 
       input,

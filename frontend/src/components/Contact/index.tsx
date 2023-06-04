@@ -76,7 +76,7 @@ const Contact = () => {
       <h2>Reach out and let's bring your ideas to life!</h2>
       <h2>I'm available for freelance work.</h2>
       <p><SiGooglemessages size={30}/> <Link to='/'>ikboljon2003@gmail.com</Link></p>
-     <img src={contactImg} width={350} alt="" />
+     <img src={contactImg} width={300} alt="" />
      </div>
       <div>
         <form>
