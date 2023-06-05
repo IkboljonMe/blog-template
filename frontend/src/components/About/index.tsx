@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
-import imgMe from "../../assets/profile2.jpg";
+import imgMe from "../../assets/aboutMe.jpeg";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Tilt } from "react-tilt";
 import { Link } from "react-router-dom";
@@ -31,28 +31,34 @@ const About = () => {
               speed: 450,
             }}
           >
-            <img src={imgMe} alt="" />
+            <img src={imgMe} alt="aboutMe" />
           </Tilt>
         </motion.div>
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
           className={classes.aboutMe}
         >
-          <h2>I'm Ikboljon</h2>
-          <h4>Full Stack Developer </h4>
+          {/* <h2>Ikboljon Abdurasulov</h2>
+          <h4>Full Stack Developer</h4> */}
           <p>
-            I am a Full-Stack developer based in Pune, India. I am an
-            Information Technology undergraduate from SPPU. I am very passionate
-            about improving my coding skills & developing applications &
-            websites. I build WebApps and Websites using MERN Stack. Working for
-            myself to improve my skills. Love to build Full-Stack clones.
+            Welcome to my portfolio! I'm a full-stack web developer with a
+            passion for creating clean and scalable code. I thrive on solving
+            problems and enjoy the challenge of finding elegant solutions. In
+            the world of web development, I can speak multiple languages
+            fluently. JavaScript is like my native language, while TypeScript
+            and Python are my trusted companions. And when it comes to Dart,
+            well, let's just say we're still working on our conversation skills!
+            I believe that a diverse set of programming languages opens up
+            endless possibilities in tackling different projects. Each language
+            brings its own strengths, and I enjoy leveraging these strengths to
+            build robust and efficient web applications. If you have any
+            questions or would like to discuss a potential project or
+            collaboration, please don't hesitate to reach out. I'm always
+            excited to explore new opportunities and contribute to meaningful
+            projects. Thank you for visiting my portfolio, and let's embark on a
+            coding journey together!
           </p>
-          <p>
-            <span>Email:</span> Ikboljon@gmail.com
-          </p>
-          <p>
-            <span>Place:</span> Uzbekistan, Tashkent
-          </p>
+
           <Link to={CV} download target="_blank">
             <button className={classes.resume}>
               Resume

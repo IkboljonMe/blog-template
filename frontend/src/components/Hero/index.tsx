@@ -1,8 +1,6 @@
 import classes from "./styles.module.scss";
 import { SectionWrapper } from "../../hoc";
-import { socialLinks } from "../../constants";
 import { Link } from "react-router-dom";
-import { SocialLink } from "../../constants/index.types";
 import { motion } from "framer-motion";
 import { container, zoomIn, mainImg } from "../../utils/motion";
 
@@ -12,7 +10,6 @@ import {
   BsLinkedin,
   BsTelegram,
   BsTwitter,
-  BsYoutube,
 } from "react-icons/bs";
 import { IoChevronDownOutline } from "react-icons/io5";
 import Typewriter from "typewriter-effect";
@@ -38,8 +35,8 @@ const Hero = () => {
             <Typewriter
               options={{
                 strings: [
-                  "Software Developer",
-                  "Web Designing",
+                  "Freelancer",
+                  "Web Developer",
                   "Frontend Developer",
                   "Backend Developer",
                 ],

@@ -1,6 +1,7 @@
 @use "../../styles/global" as global;
 @use "../../styles/colors" as colors;
 @use "../../styles/breakpoints" as bp;
+
 .about {
   position: relative;
   display: flex;
@@ -8,6 +9,7 @@
   flex-direction: column;
   justify-content: space-around;
   height: 90vh;
+  padding-bottom: 20px;
   .sectionSubText {
     color: rgb(74, 73, 73);
     text-align: center;
@@ -33,7 +35,6 @@
     img {
       border-radius: 13px;
       width: 280px;
-      height: 400px;
       @media (max-width: bp.$lg) {
         margin: auto;
         width: 290px;
