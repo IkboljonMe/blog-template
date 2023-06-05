@@ -1,87 +1,126 @@
-@use "../../styles/breakpoints" as bp;
-@use "../../styles/colors" as colors;
-@use "../../styles/global" as global;
+@use "../../styles/breakpoints"as bp;
+@use "../../styles/colors"as colors;
+@use "../../styles/global"as global;
+
 .contactWrapper {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 2.5rem;
-  overflow: hidden;
-  @media (min-width: bp.$xl) {
-    margin-top: 3rem;
-    flex-direction: row;
-  }
-  .formContainer {
-    flex: 0.75;
-    background: colors.$black-100;
-    padding: 2rem;
-    border-radius: 1rem;
-    p {
-      @include global.sectionSubText;
+ 
+  .contactSend {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    box-shadow: 0px 1px 11px -1px rgba(0, 0, 0, 0.42);
+    -webkit-box-shadow: 0px 1px 11px -1px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 0px 1px 11px -1px rgba(0, 0, 0, 0.42);
+    // flex: 0.65 ;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    .imgTitle{
+         h1{
+          color: #2506AD;
+
+         }
+         h2{
+          color: #000;
+         }
+         p{
+          display: flex;
+          align-items: center;
+          :nth-child(1){
+            background-color: #2506AD;
+            padding: 2px;
+            border-radius: 50%;
+          }
+          a{
+            margin-left: 7px;
+            color: #2506AD;
+          }
+         }
+
     }
-    h3 {
-      color: colors.$black-100;
-      @include global.sectionHeadText;
+    @media (max-width: bp.$lg) {
+     flex-direction: column;
+     align-items: center;
     }
-    form {
-      margin-top: 3rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      label {
+     form{
+      .submitBtn{
+        width: 100%;
+      }
+      .submitBtn button{        
         display: flex;
-        flex-direction: column;
-        span {
-          color: colors.$white;
-          font-weight: 400;
-          margin-bottom: 1rem;
-        }
-        input,
-        textarea {
-          background: colors.$tertiary;
-
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-          color: colors.$white;
-          border-radius: 0.5rem;
-          outline: none;
-          border: none;
-          font-weight: 400;
-        }
-        input::placeholder,
-        textarea::placeholder {
-          color: colors.$secondary;
-        }
-      }
-      button {
-        background: colors.$tertiary;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        padding-left: 2rem;
-        padding-right: 2rem;
-
-        outline: none;
         border: none;
-        border-radius: 0.75rem;
-        width: fit-content;
-        color: colors.$white;
-        font-weight: 600;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        background-color: #2506AD;
+        padding: 8px 15px;
+        border-radius: 10px;
+        font-size: 20px;
+        align-items: center;
+        &:hover{
+          .sendIcon{
+            transition: all .3s;
+            transform: translateX(7px);
+          }
+          
+        }
+        .sendIcon{
+          margin-left: 10px;
+        }
       }
-    }
-  }
-  .earthCanvasContainer {
-    @media (min-width: bp.$xl) {
-      flex: 0 0 1%;
-      height: auto;
-      width: 400px;
-    }
-    @media (min-width: bp.$md) {
-      height: 550px;
-    }
-    @media (max-width: bp.$xs) {
-      height: 350px;
+     }
+    .btnInput {
+      &:hover{
+        .faUser{
+          color: #2506AD;
+        }
+       }
+      margin-bottom: 30px;
+
+      button {
+        margin-top: 10px;
+
+        background-color: #fff;
+        padding: 8px;
+        border: 0;
+        position: absolute;
+
+        z-index: 999;
+        background: transparent;
+         
+        .faUser {
+          color: #000;
+        }
+
+      }
+
+      input,
+      textarea {
+
+        font-family: monospace;
+        font-size: 20px;
+        width: 390px;
+        outline: none;
+        border: 1px solid #dadada;
+        padding: 15px;
+        border-radius: 5px;
+        background-color: #f3f7fe;
+        transition: .3s;
+        color: indigo;
+        padding-left: 40px;
+        @media (max-width: bp.$mmd) {
+          width: 100%;
+         }
+        
+      }
+
+      input,
+      textarea {
+        &:focus {
+          border: 1px solid #2506AD;
+          box-shadow: 0 0 0 4px #3b83f65f
+        }
+      }
+      
     }
   }
 }

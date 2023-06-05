@@ -14,10 +14,9 @@ const Skill = () => {
         {skills.map(({ title, data }) => (
           <Tab title={title}>
             <div className={classes.btn}>
-              {data.map(({ icon, name }) => (
+              {data.map(({ icon, name }, index) => (
                 <motion.div
-                  onClick={() => setIsModalOpen(true)}
-                  whileHover={{ scale: 1.05 }}
+                onClick={() => setIsModalOpen(true)}
                   className={classes.icons}
                 >
                   <img src={icon} alt="" />
@@ -26,12 +25,9 @@ const Skill = () => {
                 </motion.div>
               ))}
             </div>
-            {
-              <Modal
-                isModalOpen={isModalOpen}
-                setIsModalOpen={setIsModalOpen}
-              />
-            }
+            <Modal isModalOpen={isModalOpen}
+            setIsModalOpen={setIsModalOpen}
+            />
           </Tab>
         ))}
       </Tabs>

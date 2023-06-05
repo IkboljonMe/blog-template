@@ -1,7 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
 import { About, Contact, Experience, Hero, Navbar, Skill } from "./components";
 import Background from "./components/Background/Index";
-
+import Footer from "./components/Footer";
+import Modal from './components/Skill/Modal/index'
 import classes from "./styles.module.scss";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <div className={classes.contactSection}>
           <Contact />
         </div>
+        <Footer/>
       </div>
     </BrowserRouter>
   );
