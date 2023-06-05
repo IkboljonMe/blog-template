@@ -92,4 +92,4 @@ const Hero = () => {
   );
 };
 
-export default SectionWrapper(Hero, "", "#fff");
+export default SectionWrapper(Hero, "", "#f8f8f8");

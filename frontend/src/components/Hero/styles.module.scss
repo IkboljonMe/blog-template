@@ -1,18 +1,16 @@
-@use "../../styles/colors"as colors;
-@use "../../styles/global"as global;
-@use "../../styles/breakpoints"as bp;
+@use "../../styles/colors" as colors;
+@use "../../styles/global" as global;
+@use "../../styles/breakpoints" as bp;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
 * {
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.heroSectionWrapper { 
-  //  padding: 100px 0;
+.heroSectionWrapper {
   padding-top: 100px;
   width: 100%;
   height: 100vh;
@@ -26,7 +24,6 @@
     padding-top: 70px;
     padding-left: 15px;
     width: 100%;
-
   }
 
   .headerName {
@@ -34,12 +31,10 @@
       position: relative;
       z-index: 6;
       font-size: 40px;
-      color: #002057FF;
-
-
+      color: #002057ff;
 
       span {
-        color: #F16724FF;
+        color: #f16724ff;
       }
     }
 
@@ -55,7 +50,7 @@
     }
 
     button {
-      background-color: #2506ADFF;
+      background-color: #2506adff;
       padding: 5px 19px;
       border-radius: 25px;
       border: none;
@@ -72,30 +67,26 @@
       z-index: 2;
 
       &:hover {
-        transition: all .5s;
+        transition: all 0.5s;
         box-shadow: 1px 1px 9px 0px rgba(37, 6, 173, 0.75);
         -webkit-box-shadow: 1px 1px 9px 0px rgba(37, 6, 173, 0.75);
         -moz-box-shadow: 1px 1px 9px 0px rgba(37, 6, 173, 0.75);
         background-color: rgb(30, 6, 138);
 
         .downloadIcon {
-          transition: all .5s;
+          transition: all 0.5s;
           transform: translateX(5px);
-
         }
-
       }
 
       .downloadIcon {
         margin-left: 10px;
 
-
         &:hover {
-          transition: all .3s;
+          transition: all 0.3s;
           transform: translateX(5px);
         }
       }
-
     }
 
     @media (max-width: bp.$lg) {
@@ -134,25 +125,19 @@
         -webkit-box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 1px 1px 9px -1px rgba(0, 0, 0, 0.75);
         transform: scale(1.18);
-        transition: all .3s;
-        background-color: #00D9FFFF;
+        transition: all 0.3s;
+        background-color: #00d9ffff;
 
         .socialIcon {
           color: #fff;
-
         }
-
       }
 
       .socialIcon {
-        color: #00D9FFFF;
+        color: #00d9ffff;
         z-index: 2;
-
       }
-
     }
-
-
   }
 
   .headerImg {
@@ -161,7 +146,7 @@
 
     img {
       position: relative;
-      transition: all .3s;
+      transition: all 0.3s;
       width: 370px;
       height: 370px;
       border-radius: 50%;
@@ -170,12 +155,10 @@
       -moz-box-shadow: 1px 1px 8px 0px rgba(105, 97, 97, 0.75);
 
       &:hover {
-
         box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.75);
         -webkit-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.75);
       }
-
     }
 
     @media (max-width: bp.$lg) {
@@ -183,13 +166,9 @@
       padding-top: 50px;
 
       img {
-
         width: 280px;
         height: 280px;
-
       }
     }
   }
-
-
 }
