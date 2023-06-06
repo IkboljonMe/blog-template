@@ -1,9 +1,25 @@
-@use "../../styles/breakpoints"as bp;
-@use "../../styles/colors"as colors;
-@use "../../styles/global"as global;
+@use "../../styles/breakpoints" as bp;
+@use "../../styles/colors" as colors;
+@use "../../styles/global" as global;
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .sectionSubText {
+    color: rgb(74, 73, 73);
+    text-align: center;
+  }
+  .sectionHeadText {
+    color: #000;
+    font-size: 45px;
+    text-align: center;
+    span {
+      color: #f0662bff;
+    }
+  }
+}
 .contactWrapper {
- 
   .contactSend {
     display: flex;
     justify-content: space-around;
@@ -17,63 +33,59 @@
     padding-bottom: 50px;
     background-color: #fff;
     border-radius: 10px;
-    .imgTitle{
-         h1{
-          color: #2506AD;
-
-         }
-         h2{
-          color: #000;
-         }
-         p{
-          display: flex;
-          align-items: center;
-          :nth-child(1){
-            background-color: #2506AD;
-            padding: 2px;
-            border-radius: 50%;
-          }
-          a{
-            margin-left: 7px;
-            color: #2506AD;
-          }
-         }
-
+    .imgTitle {
+      h1 {
+        color: #2506ad;
+      }
+      h2 {
+        color: #000;
+      }
+      p {
+        display: flex;
+        align-items: center;
+        :nth-child(1) {
+          color: #f0662bff;
+          padding: 2px;
+        }
+        a {
+          margin-left: 7px;
+          color: #f0662bff;
+        }
+      }
     }
     @media (max-width: bp.$lg) {
-     flex-direction: column;
-     align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-     form{
-      .submitBtn{
+    form {
+      .submitBtn {
         width: 100%;
       }
-      .submitBtn button{        
+      .submitBtn button {
         display: flex;
         border: none;
-        background-color: #2506AD;
+        background-color: #2506ad;
         padding: 8px 15px;
         border-radius: 10px;
         font-size: 20px;
         align-items: center;
-        &:hover{
-          .sendIcon{
-            transition: all .3s;
+        &:hover {
+          .sendIcon {
+            transition: all 0.3s;
             transform: translateX(7px);
           }
-          
         }
-        .sendIcon{
+        .sendIcon {
           margin-left: 10px;
         }
       }
-     }
+    }
     .btnInput {
-      &:hover{
-        .faUser{
-          color: #2506AD;
+      &:hover {
+        .faUser {
+          color: #2506ad;
         }
-       }
+      }
       margin-bottom: 30px;
 
       button {
@@ -86,16 +98,14 @@
 
         z-index: 999;
         background: transparent;
-         
+
         .faUser {
           color: #000;
         }
-
       }
 
       input,
       textarea {
-
         font-family: monospace;
         font-size: 20px;
         width: 390px;
@@ -104,23 +114,21 @@
         padding: 15px;
         border-radius: 5px;
         background-color: #f3f7fe;
-        transition: .3s;
+        transition: 0.3s;
         color: indigo;
         padding-left: 40px;
         @media (max-width: bp.$mmd) {
           width: 100%;
-         }
-        
+        }
       }
 
       input,
       textarea {
         &:focus {
-          border: 1px solid #2506AD;
-          box-shadow: 0 0 0 4px #3b83f65f
+          border: 1px solid #2506ad;
+          box-shadow: 0 0 0 4px #3b83f65f;
         }
       }
-      
     }
   }
 }

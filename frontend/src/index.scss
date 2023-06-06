@@ -8,7 +8,10 @@
   scroll-behavior: smooth;
   color-scheme: dark;
 }
-a {
-  text-decoration: inherit;
-  color: inherit;
+body,
+html {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
