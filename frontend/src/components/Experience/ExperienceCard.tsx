@@ -8,16 +8,14 @@ interface ExperienceCardProps {
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
     <VerticalTimelineElement
-  
-    contentStyle={{        
-        background: "#000",
+      contentStyle={{
+        background: "#F2F0EB",
         color: "#000",
       }}
       style={{ margin: 0, padding: 0 }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: "7px solid  #F2F0EB" }}
       date={experience.date}
-     
-      iconStyle={{ background: experience.iconBg }}
+      iconStyle={{ background: experience.iconBg, color: "#000" }}
       icon={
         <div className={classes.experienceImg}>
           <img src={experience.icon} alt={experience.company_name} />

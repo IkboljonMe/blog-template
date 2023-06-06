@@ -6,7 +6,6 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { Tilt } from "react-tilt";
 import { Link } from "react-router-dom";
 import classes from "./styles.module.scss";
-
 import CV from "../../assets/cv.9502c5eda7efc6c3a134.pdf";
 
 const About = () => {
