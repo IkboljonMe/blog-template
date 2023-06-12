@@ -21,7 +21,7 @@ const TabTitle: React.FC<TabTitleProps> = (props) => {
       ])}
     >
       <div className={classes.skillTitle} onClick={onClick}>
-        {title}
+        <h2>{title}</h2>
       </div>
     </div>
   );

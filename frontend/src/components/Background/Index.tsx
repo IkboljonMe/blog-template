@@ -22,7 +22,7 @@ const Background = () => {
       loaded={particlesLoaded}
       style={{
         position: "absolute",
-        height: "100vh",
+        height: "120vh",
       }}
       options={options}
     />

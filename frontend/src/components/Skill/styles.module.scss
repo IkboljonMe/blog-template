@@ -1,19 +1,36 @@
-@use "../../styles/global" as global;
-@use "../../styles/colors" as colors;
-@use "../../styles/breakpoints" as bp;
+@use "../../styles/global"as global;
+@use "../../styles/colors"as colors;
+@use "../../styles/breakpoints"as bp;
 
 .container {
   display: flex;
   flex-direction: column;
+  padding-top: 0;
   gap: 2rem;
+  min-height: fit-content;
+
+  span {
+    display: none;
+  }
+
   .sectionSubText {
     color: #f8f8f8;
     text-align: center;
   }
+
   .sectionHeadText {
-    color: #fff;
+    color: #000;
     font-size: 45px;
     text-align: center;
+
+    p {
+      display: inline-block;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 25px;
+    }
+
     span {
       color: #f0662bff;
     }
@@ -21,55 +38,134 @@
 }
 
 .skills {
-  background-color: #310272ff;
+  background-color: #fff;
   padding: 20px;
   margin-bottom: 50px;
   height: auto;
+  position: relative;
+
+  @media (max-width: bp.$md) {
+    height: auto;
+  }
 }
 
 .btn {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   row-gap: 30px;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
+
   @media (max-width: bp.$mmd) {
-    grid-template-columns: auto auto auto auto auto;
-  }
-  @media (max-width: bp.$md) {
-    grid-template-columns: auto auto auto auto;
-  }
-  @media (max-width: bp.$sm) {
-    grid-template-columns: auto auto auto auto;
-  }
-  @media (max-width: 520px) {
-    grid-template-columns: auto auto auto;
-  }
-  @media (max-width: 440px) {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .icons {
-    background-color: #050020;
+  @media (max-width: 520px) {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    position: relative;
+    height: 350px;
     padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    transition: all 0.5s;
+
+    p {
+      color: #000;
+    }
+
+    .name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        color: #000;
+
+      }
+    }
 
     &:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.75);
-      background-color: #000;
+      .overlay {
+        height: 75%;
+
+      }
     }
 
     img {
-      width: 60px;
-      height: 60px;
+      width: 70px;
     }
+
+    .text {
+      width: 100%;
+      padding: 10px 15px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      
+      ul {
+        display: block;
+        padding-left: 20px;
+        li{
+          color: #000;
+        }
+      }
+
+      p {
+        color: #000;
+      }
+
+      .btns {
+        height: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      .listItem {}
+
+      button {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #f0662bff;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        border: 0;
+
+      }
+    }
+
+
+
+    .overlay {
+      border-radius: 12px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      transition: .5s ease;
+
+    }
+
+    &:hover {
+      box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.75);
+    }
+
+
   }
 }

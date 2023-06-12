@@ -13,6 +13,7 @@ export type Experience = {
 type SkillData = {
   name: string;
   icon: any;
+  text: string,
 };
 export type Skill = {
   title: string;

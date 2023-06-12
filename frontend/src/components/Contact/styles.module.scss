@@ -35,7 +35,7 @@
     border-radius: 10px;
     .imgTitle {
       h1 {
-        color: #2506ad;
+        color: #f0662bff;
       }
       h2 {
         color: #000;
@@ -64,7 +64,7 @@
       .submitBtn button {
         display: flex;
         border: none;
-        background-color: #2506ad;
+        background-color: #f0662bff;
         padding: 8px 15px;
         border-radius: 10px;
         font-size: 20px;
@@ -81,11 +81,9 @@
       }
     }
     .btnInput {
-      &:hover {
-        .faUser {
-          color: #2506ad;
-        }
-      }
+     .faUser{
+      color: #f0662bff;
+     }
       margin-bottom: 30px;
 
       button {
@@ -96,12 +94,10 @@
         border: 0;
         position: absolute;
 
-        z-index: 999;
+        z-index: 1;
         background: transparent;
 
-        .faUser {
-          color: #000;
-        }
+        
       }
 
       input,
@@ -125,8 +121,8 @@
       input,
       textarea {
         &:focus {
-          border: 1px solid #2506ad;
-          box-shadow: 0 0 0 4px #3b83f65f;
+          border: 1px solid #f0662bff;
+          box-shadow: 0 0 0 2px rgba(254, 104, 40, 0.5);
         }
       }
     }

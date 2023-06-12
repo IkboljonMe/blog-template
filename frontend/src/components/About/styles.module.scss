@@ -8,7 +8,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  height: 90vh;
+  height: auto;
   padding-bottom: 20px;
   .sectionSubText {
     color: rgb(74, 73, 73);
@@ -28,6 +28,7 @@
     justify-content: space-between;
     @media (max-width: bp.$lg) {
       flex-direction: column;
+      height: auto;
       align-items: center;
     }
   }
@@ -90,7 +91,6 @@
       -webkit-box-shadow: 1px 1px 9px 4px rgba(98, 71, 214, 0.5);
       -moz-box-shadow: 1px 1px 9px 4px rgba(105, 85, 196, 0.55);
       margin-bottom: 20px;
-      margin-top: 60px;
       position: relative;
       z-index: 2;
 

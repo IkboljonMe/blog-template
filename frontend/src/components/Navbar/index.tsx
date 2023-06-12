@@ -5,6 +5,7 @@ import { logo } from "../../assets";
 import clsx from "clsx";
 import { FaTimes } from "react-icons/fa";
 import { HiMenuAlt1 } from "react-icons/hi";
+import { VscChromeClose } from "react-icons/vsc";
 
 import classes from "./styles.module.scss";
 const Navbar = () => {
@@ -71,7 +72,7 @@ const Navbar = () => {
             onClick={() => setToggle(!toggle)}
           >
             {toggle ? (
-              <FaTimes className={classes.icons} size={32} />
+              <VscChromeClose className={classes.icons} size={32} />
             ) : (
               <HiMenuAlt1 className={classes.icons} size={32} />
             )}
@@ -83,6 +84,9 @@ const Navbar = () => {
               [classes.deactiveMobileMenu]: !toggle,
             })}
           >
+            <div className={classes.overlay}>
+
+            </div>
             <ul className={classes.container}>
               {navLinks.map((nav) => (
                 <li
