@@ -2,9 +2,8 @@ import classes from "./styles.module.scss";
 import clsx from "clsx";
 import React from "react";
 import { FaTimes } from "react-icons/fa";
-import  {react}  from "../../../assets/modalImages";
+import react  from "../../../assets/hero1.png";
 import {HiArrowTopRightOnSquare} from 'react-icons/hi2'
-import {Modal} from "../../../constants/index.types"
 import { HiCode } from "react-icons/hi";
 
 interface ModalProps {

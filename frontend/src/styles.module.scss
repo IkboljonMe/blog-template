@@ -1,24 +1,6 @@
-@use "./styles/colors" as colors;
 .wrapper {
-  position: relative;
-  background-color: colors.$primary;
   z-index: 0;
-}
-.container {
-  position: absolute;
-  width: 100%;
-}
-.navbarAndHeroSection {
-  height: 100%;
-  z-index: -1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  .contactSection {
+  .container {
     position: relative;
   }
-}
-.emptyPlace {
-  width: 100%;
-  height: 110vh;
 }

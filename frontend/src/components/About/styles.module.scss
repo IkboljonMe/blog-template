@@ -1,55 +1,28 @@
 @use "../../styles/global" as global;
 @use "../../styles/colors" as colors;
 @use "../../styles/breakpoints" as bp;
-.about{
+
+.about {
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  @media (max-width: bp.$xxl) {
-    height: 129vh;
-  } 
-  @media (max-width: bp.$xl) {
-    height: 190vh;
-  } 
-  @media (max-width: bp.$lg) {
-    height: 212vh;
-  } 
-  @media (max-width: bp.$md) {
-    height: 205vh;
-  } 
-  @media (max-width: bp.$sm) {
-    height: 220vh;
-  } 
-  @media (max-width: bp.$xsmm) {
-    height: 280vh;
-  } 
-  @media (max-width: bp.$xsm) {
-    height: 280vh;
-  }
-  @media (max-width: bp.$xs) {
-    height: 320vh;
-  }
-  @media (max-width: bp.$xss) {
-    height: 330vh;
-  }
-  .sectionSubText{
+  justify-content: space-around;
+  height: 90vh;
+  padding-bottom: 20px;
+  .sectionSubText {
     color: rgb(74, 73, 73);
     text-align: center;
   }
-  .sectionHeadText{
-
+  .sectionHeadText {
     color: #000;
     font-size: 45px;
     text-align: center;
-    span{
-      color: #F0662BFF;
+    span {
+      color: #f0662bff;
     }
   }
-  .aboutMeAndImg{
-    padding-top: 90px;
+  .aboutMeAndImg {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -58,15 +31,14 @@
       align-items: center;
     }
   }
-  .cardImg{
-    img{
+  .cardImg {
+    img {
       border-radius: 13px;
       width: 280px;
-      height: 400px;
       @media (max-width: bp.$lg) {
         margin: auto;
         width: 290px;
-        height: 35  0px;
+        height: 35 0px;
         margin-left: 20px;
       }
     }
@@ -74,41 +46,39 @@
       width: 100%;
       text-align: center;
       margin: auto;
-      img{
+      img {
         margin: auto;
       }
     }
-  } 
-  .aboutMe{
+  }
+  .aboutMe {
     width: 60%;
     padding: 0 30px;
     @media (max-width: bp.$lg) {
       width: 100%;
       padding: 0 18px;
     }
-    h2{
+    h2 {
       color: #000;
       margin-bottom: 4px;
-
     }
-    h4{
+    h4 {
       color: #444;
       margin-bottom: 20px;
     }
-    p{
+    p {
       text-align: justify;
       color: #111;
       font-weight: 500;
       margin-bottom: 20px;
       font-size: 15px;
-      span{
-        color: #F0662BFF;
+      span {
+        color: #f0662bff;
         font-size: 18px;
-
       }
     }
     .resume {
-      background-color: #2506ADFF;
+      background-color: #2506adff;
       padding: 5px 19px;
       border-radius: 25px;
       border: none;
@@ -125,33 +95,26 @@
       z-index: 2;
 
       &:hover {
-        transition: all .5s;
+        transition: all 0.5s;
         box-shadow: 1px 1px 9px 0px rgba(37, 6, 173, 0.75);
         -webkit-box-shadow: 1px 1px 9px 0px rgba(37, 6, 173, 0.75);
         -moz-box-shadow: 1px 1px 9px 0px rgba(37, 6, 173, 0.75);
         background-color: rgb(30, 6, 138);
 
         .downloadIcon {
-          transition: all .5s;
+          transition: all 0.5s;
           transform: translateX(5px);
-
         }
-
       }
 
       .downloadIcon {
         margin-left: 10px;
 
-
         &:hover {
-          transition: all .3s;
+          transition: all 0.3s;
           transform: translateX(5px);
         }
       }
-
     }
   }
-
 }
-
-

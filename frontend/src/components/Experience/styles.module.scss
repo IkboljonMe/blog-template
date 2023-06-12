@@ -1,6 +1,25 @@
 @use "../../styles/colors" as colors;
 @use "../../styles/global" as global;
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: auto;
+  padding-bottom: 40px;
+  .sectionSubText {
+    color: rgb(74, 73, 73);
+    text-align: center;
+  }
+  .sectionHeadText {
+    color: #000;
+    font-size: 45px;
+    text-align: center;
+    span {
+      color: #f0662bff;
+    }
+  }
+}
 .experienceImg {
   display: flex;
   justify-content: center;
@@ -15,12 +34,12 @@
 }
 .experienceCardTop {
   h3 {
-    color: colors.$white;
+    color: #000;
     font-size: 24px;
     font-weight: bold;
   }
   p {
-    color: colors.$secondary;
+    color: #555;
     font-size: 16px;
     font-weight: bolder;
   }
@@ -32,22 +51,17 @@
   li {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    color: colors.$white;
+    color: #000;
     font-size: 14px;
     padding-left: 4px;
     letter-spacing: 0.05em;
   }
 }
-.sectionSubText {
-  // @include global.sectionSubText;
-  text-align: center;
-}
-.sectionHeadText {
-  // @include global.sectionHeadText;
-  text-align: center;
-}
 .timelineWrapper {
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
+}
+.vertical-timeline {
+  color: #ffa351;
 }

@@ -1,11 +1,30 @@
-@use "../../styles/global"as global;
-@use "../../styles/colors"as colors;
-@use "../../styles/breakpoints"as bp;
+@use "../../styles/global" as global;
+@use "../../styles/colors" as colors;
+@use "../../styles/breakpoints" as bp;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .sectionSubText {
+    color: #f8f8f8;
+    text-align: center;
+  }
+  .sectionHeadText {
+    color: #fff;
+    font-size: 45px;
+    text-align: center;
+    span {
+      color: #f0662bff;
+    }
+  }
+}
 
 .skills {
-  background-color: #310272FF;
+  background-color: #310272ff;
   padding: 20px;
   margin-bottom: 50px;
+  height: auto;
 }
 
 .btn {
@@ -15,31 +34,20 @@
   gap: 20px;
   flex-wrap: wrap;
   @media (max-width: bp.$mmd) {
-  grid-template-columns: auto auto auto auto auto;
-    
-
+    grid-template-columns: auto auto auto auto auto;
   }
   @media (max-width: bp.$md) {
-  grid-template-columns:auto auto auto auto;
-    
-
+    grid-template-columns: auto auto auto auto;
   }
   @media (max-width: bp.$sm) {
-  grid-template-columns: auto auto auto auto;
-    
-
+    grid-template-columns: auto auto auto auto;
   }
   @media (max-width: 520px) {
-  grid-template-columns: auto auto auto;
-    
-
+    grid-template-columns: auto auto auto;
   }
   @media (max-width: 440px) {
-  grid-template-columns: auto auto;
-    
-
+    grid-template-columns: auto auto;
   }
-
 
   .icons {
     background-color: #050020;
@@ -49,8 +57,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    transition: all .5s;
-
+    transition: all 0.5s;
 
     &:hover {
       transform: scale(1.05);
@@ -65,5 +72,4 @@
       height: 60px;
     }
   }
-
 }
