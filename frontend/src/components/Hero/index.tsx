@@ -3,6 +3,7 @@ import { SectionWrapper } from "../../hoc";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { container, zoomIn, mainImg } from "../../utils/motion";
+import CV from "../../assets/cv.9502c5eda7efc6c3a134.pdf";
 
 import {
   BsGithub,
@@ -15,6 +16,7 @@ import { IoChevronDownOutline } from "react-icons/io5";
 import Typewriter from "typewriter-effect";
 import broo from "../../assets/hero.png";
 import { Tilt } from "react-tilt";
+import { AiOutlineDownload } from "react-icons/ai";
 
 const Hero = () => {
   return (
@@ -26,12 +28,12 @@ const Hero = () => {
         className={classes.headerName}
       >
         <h1>Hi There,</h1>
-        <h1>
+        <h1 className={classes.nameMe}>
           I'm Ikboljon <span>Abdurasulov</span>
         </h1>
-        <p>
-          I Am
-          <span>
+        <div>
+          <span>I Am </span>
+          <h3>
             <Typewriter
               options={{
                 strings: [
@@ -44,12 +46,20 @@ const Hero = () => {
                 loop: true,
               }}
             />
-          </span>
-        </p>
+          </h3>
+        </div>
+        <div className={classes.aboutResume}>
         <button>
-          About Me{" "}
+          About Me
           <IoChevronDownOutline className={classes.downloadIcon} size={27} />{" "}
         </button>
+        <Link to={CV} download target="_blank">
+            <button className={classes.resume}>
+              Resume
+              <AiOutlineDownload className={classes.downloadIcon} size={27} />
+            </button>
+          </Link>
+        </div>
         <div className={classes.socialIcons}>
           <Link to="/">
             <BsLinkedin className={classes.socialIcon} size={20} />

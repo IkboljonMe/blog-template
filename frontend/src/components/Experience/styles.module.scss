@@ -2,10 +2,10 @@
 @use "../../styles/global" as global;
 
 .container {
+  z-index: 999999;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: auto;
   padding-bottom: 40px;
   .sectionSubText {
     color: rgb(74, 73, 73);

@@ -6,12 +6,8 @@
   display: flex;
   width: 100%;
   align-items: center;
-  padding-top: 1.25rem
-    /* 20px */
-  ;
-  padding-bottom: 1.25rem
-    /* 20px */
-  ;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;  
   position: fixed;
   top: 0;
   z-index: 999;
@@ -125,7 +121,7 @@
             font-weight: 500;
             font-size: 1.2rem;
             cursor: pointer;
-           
+
           }
         }
       }
@@ -133,12 +129,14 @@
       .mobileMenuItems:hover {
         color: colors.$white;
       }
-      .activeMenu{
+
+      .activeMenu {
         margin: 7px 0;
 
         color: #F07427FF;
       }
-      .deactiveMenu{
+
+      .deactiveMenu {
         margin: 7px 0;
         color: #fff;
       }
@@ -171,6 +169,7 @@
   box-shadow: 3px 7px 12px -12px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 3px 7px 12px -12px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 7px 12px -12px rgba(0, 0, 0, 0.75);
+
   @media (max-width: bp.$lg) {
     padding: 9px 20px;
   }
@@ -182,6 +181,7 @@
   -webkit-box-shadow: 3px 7px 12px -12px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 7px 12px -12px rgba(0, 0, 0, 0.75);
   background-color: #fff;
+
   @media (max-width: bp.$lg) {
     padding: 14px 20px;
   }
@@ -189,7 +189,7 @@
 
 .activeMenu {
   color: #F07427FF;
-  
+
   a {
     font-weight: 600;
     border-bottom: 2px solid #F07427FF;

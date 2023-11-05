@@ -7,14 +7,17 @@ import { skills } from "../../constants";
 import { useState } from "react";
 import Modal from "./Modal";
 import { slideIn } from "../../utils/motion";
+import { react } from "../../assets/modalImages";
+import { MdViewStream } from "react-icons/md";
+import { BiCodeAlt } from "react-icons/bi";
 const Skill = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className={classes.container}>
-      <motion.div variants={slideIn("top", "tween", 0.2, 1)}>
+      <motion.div>
         <p className={classes.sectionSubText}>What</p>
         <h2 className={classes.sectionHeadText}>
-          I'm Capable <span>Of</span>
+          I'm Capable <p style={{ color: "#f0662bff" }}>Of</p>
         </h2>
       </motion.div>
       <div className={classes.skills}>
@@ -22,14 +25,34 @@ const Skill = () => {
           {skills.map(({ title, data }) => (
             <Tab title={title}>
               <div className={classes.btn}>
-                {data.map(({ icon, name }, index) => (
+                {data.map(({ icon, name,text }, index) => (
                   <motion.div
-                    onClick={() => setIsModalOpen(true)}
-                    className={classes.icons}
+                    // onClick={() => setIsModalOpen(true)}
+                    className={classes.card}
                   >
-                    <img src={icon} alt="" />
-                    <h4>{name}</h4>
-                    <h5>Intermediate</h5>
+                    <div className={classes.name}>
+                      <h2>{name}</h2>
+                      <img src={icon} alt="Avatar" />
+                    </div>
+                    <p>
+                          {text}
+                        </p>
+                    <div className={classes.overlay}>
+                      <div className={classes.text}>
+                       <div className={classes.listItem}>
+                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                       <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                       </ul>
+                       </div>
+                        <div className={classes.btns}>
+                          <button>Views <MdViewStream size={20}/></button>
+                          <button>Code<BiCodeAlt size={20}/></button>
+                        </div>
+                      </div>
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -45,4 +68,4 @@ const Skill = () => {
   );
 };
 
-export default SectionWrapper(Skill, "skills", "#5504ACFF");
+export default SectionWrapper(Skill, "skills", "#fff");

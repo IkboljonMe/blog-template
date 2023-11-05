@@ -13,6 +13,7 @@ export type Experience = {
 type SkillData = {
   name: string;
   icon: any;
+  text: string,
 };
 export type Skill = {
   title: string;
@@ -23,3 +24,9 @@ export type SocialLink = {
   icon: any;
   link: string;
 };
+export type Modal = {
+  title: string;
+  projectName: string;
+  img: any; 
+  points: string[]; 
+}

@@ -33,6 +33,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
         ))}
       </ul>
     </VerticalTimelineElement>
+    
   );
 };
 export default ExperienceCard;

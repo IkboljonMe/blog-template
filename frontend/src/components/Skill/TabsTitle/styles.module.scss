@@ -1,26 +1,46 @@
 @use "../../../styles/global" as global;
 @use "../../../styles/colors" as colors;
 @use "../../../styles/breakpoints" as bp;
-
+.tabs{
+  height: auto;
+}
 //Tab title
 .tabTitle {
   width: 100%;
+  height: 50px;
   text-align: center;
   cursor: pointer;
-  padding-bottom: 5px;
   color: #fff;
-  transition: all 1s;
+  transition: all 0.2s;
+  border: 2px solid #555;
+  border-radius: 8px;
+  margin: 5px 10px;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 510px) {
+    height: auto;
+    padding: 5px;
+}
   .skillTitle {
-    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    width: 100%;
+    height: 100%;
     font-size: 22px;
   }
 }
 .isActive {
-  border-bottom: 2px solid white;
-  background-color: #0b2944ff;
+  border: 2px solid #f0662bff;
+  .skillTitle{
+    color: #f0662bff;
+  }
+
 }
 .isNotAcitve {
   border-bottom: none;
+
   background-color: transparent;
 }
 //Tabs
@@ -28,6 +48,17 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  // padding: 10px;
   color: #000;
+}
+.skillTitle{
+  h2{
+    font-size: 22px;
+    font-weight: 500;
+  }
+  @media (max-width: 510px) {
+      h2{
+        font-size: 14px;
+      }
+  }
 }
